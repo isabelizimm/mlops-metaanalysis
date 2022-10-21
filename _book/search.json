@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "sections/proposal.html",
+    "href": "sections/proposal.html",
+    "title": "2  Project proposal",
+    "section": "",
+    "text": "Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently. These practices are part of the machine learning lifecycle, occurring after training and tuning a model. While not every MLOps practice is applicable at scale for every team, these best practices can elevate any size of project."
+  },
+  {
+    "objectID": "sections/proposal.html#current-standing",
+    "href": "sections/proposal.html#current-standing",
+    "title": "2  Project proposal",
+    "section": "6.1 Current standing",
+    "text": "6.1 Current standing\n\n1. Is there anything in our vocabulary we should change?\n\nAfter our research, we feel confident in our choice to focus on the practices of versioning, deploying, and monitoring. We also want to continue to stress the importance of modularity and composability with MLOps tools."
+  },
+  {
+    "objectID": "sections/proposal.html#scope",
+    "href": "sections/proposal.html#scope",
+    "title": "2  Project proposal",
+    "section": "6.2 Scope",
+    "text": "6.2 Scope\n\n2. Where are our shortcomings? 3. Are these things that are out of scope, or that need more investment?\n\nWe feel DAG support is out of scope of vetiver. We feel model registries may become important, but they are not currently in our short-term plan. Currently, to make a model registry for R objects, you could use a mix of pins and htmlwidgets and this may become easy to implement in Python with Quarto."
+  },
+  {
+    "objectID": "sections/proposal.html#intended-future-investments",
+    "href": "sections/proposal.html#intended-future-investments",
+    "title": "2  Project proposal",
+    "section": "6.3 Intended future investments",
+    "text": "6.3 Intended future investments\n\n2. Where are our shortcomings? 3. Are these things that are out of scope, or that need more investment?\n\nWe hope to invest more time in monitoring, but need to balance the fact that a lot of the CI/CD in monitoring is infrastructure dependent.\nThe language of MLOps is still developing. Many terms such as “batch processing” have multiple conflicting meanings. We proposed to create a glossary of how we use terms in vetiver’s documentation. (or put this in current standing?)\nWe also feel it is important to inspect the incorporation of vetiver components with other MLOps projects, such as MLFlow or Metaflow.\nWe would like to use the “The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction” as a framework for to best understand where vetiver “wins points” to help explain to usefulness of the project in terms of best practices."
+  },
+  {
+    "objectID": "sections/proposal.html#specific-objectives",
+    "href": "sections/proposal.html#specific-objectives",
+    "title": "2  Project proposal",
+    "section": "2.2 Specific Objectives",
+    "text": "2.2 Specific Objectives\nThis project seeks to provide an overview"
+  },
+  {
+    "objectID": "sections/proposal.html#literature-review",
+    "href": "sections/proposal.html#literature-review",
+    "title": "2  Project proposal",
+    "section": "2.3 Literature Review",
+    "text": "2.3 Literature Review\nMLOps frameworks have a broad scope. Projects generally fall into a few different categories:\n\nPipelines\nWorkflow management\nExperiment tracking\nModel versioning\nModel deployment\nModel monitoring\nAll-in-one\n\nMLOps is difficult for a myriad of reasons. One common pain point is that data science is highly experimental, while deploying to a production environment requires strict software engineering practices. To help ease this pain point, APIs are commonly used to deploy models due to their stability and simplicity. APIs can be tested, and they act nearly identically in every architecture. This allows for software engineering practices to be applied to APIs. They are also easy to configure and update, giving data scientists agility to retrain and update models as needed."
+  },
+  {
+    "objectID": "sections/proposal.html#methodology-of-the-proposed-research-work",
+    "href": "sections/proposal.html#methodology-of-the-proposed-research-work",
+    "title": "2  Project proposal",
+    "section": "2.4 Methodology of the Proposed Research Work",
+    "text": "2.4 Methodology of the Proposed Research Work\n\n\nnumber of rows: 60\n\n\n\n\n\nshape: (3, 3)\n\n\n\n\nname\n\n\ntype\n\n\ndescription\n\n\n\n\nstr\n\n\nstr\n\n\nstr\n\n\n\n\n\n\n\"Aim\"\n\n\n\"version\"\n\n\n\"A super-easy w...\n\n\n\n\n\"aiWARE\"\n\n\n\"ml platform\"\n\n\n\"aiWARE helps M...\n\n\n\n\n\"ClearML\"\n\n\n\"ml platform\"\n\n\n\"ML/DL developm...\n\n\n\n\n\n\n\n\n\n\n\n\n\n  \n    \n      \n      name\n      type\n      description\n    \n  \n  \n    \n      0\n      Aim\n      version\n      A super-easy way to record search and compare ...\n    \n    \n      1\n      aiWARE\n      ml platform\n      aiWARE helps MLOps teams evaluate deploy integ...\n    \n    \n      2\n      ClearML\n      ml platform\n      ML/DL development and production suite"
+  },
+  {
+    "objectID": "sections/proposal.html#the-interdisciplinary-nature-of-your-proposed-research",
+    "href": "sections/proposal.html#the-interdisciplinary-nature-of-your-proposed-research",
+    "title": "2  Project proposal",
+    "section": "2.5 The interdisciplinary nature of your proposed research",
+    "text": "2.5 The interdisciplinary nature of your proposed research\nMachine learning operations has an interdisciplinary nature. In fact, many of the reasons it is so difficult is due to the span of knowledge necessary for successful operationalization of models. It is necessary to have knowledge of data wrangling and statistical modeling to create the model (as taught in CAP 5320 - Data Wrangling and Exploratory Data Analysis and CAP 5765 - Computational Data Analysis), along with knowledge of software engineering best practices to have a stable deployment (CEN 5035 - Advanced Software Engineering) and visualization skills to continually monitor model performance (CAP 5735 - Data Visualization and Reproducible Research)."
+  },
+  {
+    "objectID": "sections/proposal.html#deliverables",
+    "href": "sections/proposal.html#deliverables",
+    "title": "2  Project proposal",
+    "section": "2.6 Deliverables",
+    "text": "2.6 Deliverables\nThe intended deliverable of this project is a paper that does an analysis."
+  },
+  {
+    "objectID": "sections/proposal.html#summary",
+    "href": "sections/proposal.html#summary",
+    "title": "2  Project proposal",
+    "section": "2.7 Summary",
+    "text": "2.7 Summary"
+  },
+  {
+    "objectID": "sections/proposal.html#several-key-literature-references-or-sources-ieee-citation-style",
+    "href": "sections/proposal.html#several-key-literature-references-or-sources-ieee-citation-style",
+    "title": "2  Project proposal",
+    "section": "2.8 Several key literature references or sources (IEEE Citation Style)",
+    "text": "2.8 Several key literature references or sources (IEEE Citation Style)\nBooks:\n\nDesigning Machine Learning Systems by Chip Huyen\n\nArticles:\n\n“Machine Learning Operations (MLOps): Overview, Definition, and Architecture” by Kreuzberger et al\n“Towards Observability for Production Machine Learning Pipelines” by Shankar et al\n“The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction” by Breck et al\n“Operationalizing Machine Learning: An Interview Study” by Shankar et al\n“Context: The Missing Piece in the Machine Learning Lifecycle”\n“A Comparison of Open Source Tools for Data Science”\n“Open-Source Network Simulation Tools: An Overview”\n“Demystifying mlops and presenting a recipe for the selection of open-source tools”\n\nWeb content:\n\nHow ML Breaks: A Decade of Outages for One Large ML Pipeline by Papasian and Underwood\nGoogle’s Practitioners Guide to MLOps by Salama et al\nMLOps Is a Mess But That’s to be Expected"
+  },
+  {
+    "objectID": "sections/proposal.html#further-work",
+    "href": "sections/proposal.html#further-work",
+    "title": "2  Project proposal",
+    "section": "2.7 Further work",
+    "text": "2.7 Further work\nThe discoveries from this work could easily be extended further. One possible outcome would be a second paper in the style of “Ten simple rules for X”, where the topic would be related to machine learning operations. Another extension could be an opinionated workflow for a specific task built with a selection of the tools analyzed; this could also include multiple open source contributions to these tools."
+  },
+  {
+    "objectID": "sections/rough.html",
+    "href": "sections/rough.html",
+    "title": "3  Rough literature review",
+    "section": "",
+    "text": "This book is about ML systems holistically, from model development through to model monitoring and retraining schedules\nMost relevant chapters are Ch 1, 2, 7, 8, 10, maybe 11\nFrom my perspective a lot of the narrative in this book assumes folks are using deep learning models, but most models in production are not deep learning\nOne paragraph at the beginning of Ch 7 seems to indicate that wrapping a model in an API such as FastAPI is easy (“all you have to do is…”) but then goes on to say that “deploying is easy if you ignore all the hard parts”\nSeveral chapters highlight the need for managing multiple models, which can motivate some work on our part on model registry tooling I thought it was interesting how this book categorizes tools as orchestrators, schedulers, MLOps platforms, among others.\nIMO our tools like vetiver don’t neatly fall into any of the tool categories outlined in this book; they work with an orchestrator or you could use them as part of your MLOps platform. Is that a problem? How do we best explain what these tools do?\nThere is a lot of discussion around using REST APIs. The main concern is the complexity with many APIs making many requests to each other, so brokers such as Kafka are held to the highest standard. (The trade off here of complexity is not worth it at this point?) (Actually, GitHub is moving more to REST, albeit away from GraphQL.)\nThere’s a different discussion about “reasonable scale” in Chapter 10, that is, companies that work with gigabytes or maybe terabytes of data a day. I think vetiver is an option for “reasonable scale” companies/models, where a REST API still makes the most sense. I spent a while wrestling with the online (predictions generated and returned as soon as requests arrive) vs. batch (predictions generated periodically).\nI am debating changing my own language to synchronous vs. asynchronous. How to use the best language for clarity? “Batch prediction is a workaround for when online prediction isn’t cheap enough or fast enough.”\nNoting another best practice: Having two different pipelines for training and inference is a common source for bugs for ML in production.\nMonitoring toolbox: logs, dashboards, alerts. Depending on how DIY a developer is feeling, we have about 0.5/3 of these things. (What do we feel is our monitoring toolbox? How much is infrastructure dependent?) Michael"
+  },
+  {
+    "objectID": "sections/rough.html#tests-for-features-and-data",
+    "href": "sections/rough.html#tests-for-features-and-data",
+    "title": "3  Designing Machine Learning Systems",
+    "section": "8.1 Tests for features and data",
+    "text": "8.1 Tests for features and data\n\n\n\n\n\n\n\nTest\nExample\n\n\n\n\nFeature expectations are captured in a schema.\nwriting down expectations, then compare to data\n\n\nAll features are beneficial.\nand then compare them to the data\n\n\nNo feature’s cost is too much.\nconsider not only added inference latency and RAM usage, but also upstream data dependencies\n\n\nFeatures adhere to meta-level requirements.\nprogrammatically enforce these requirements (such as user privacy), so that all models in production properly adhere to them.\n\n\nThe data pipeline has appropriate privacy controls.\ntest that access to pipeline data is controlled as tightly as the access to raw user data, especially for data sources that haven’t previously been used in ML. Finally, test that any user-requested data deletion propagates to the data in the ML training pipeline, and to any learned models\n\n\nNew features can be added quickly.\ndetermine what is considered “quickly”, suggested 1-2 months\n\n\nAll input feature code is tested.\nbugs in features may be almost impossible to detect once they have entered the datageneration process"
+  },
+  {
+    "objectID": "sections/rough.html#tests-for-model-development",
+    "href": "sections/rough.html#tests-for-model-development",
+    "title": "3  Designing Machine Learning Systems",
+    "section": "8.2 Tests for model development",
+    "text": "8.2 Tests for model development\n\n\n\n\n\n\n\nTest\nExample\n\n\n\n\nModel specs are reviewed and submitted.\neverything is in a repo\n\n\nOffline and online metrics correlate.\ncheck your bias, do A/B tests (even if small scale)\n\n\nAll hyperparameters have been tuned.\ngrid search, or other internal hyperparameter tuning\n\n\nThe impact of model staleness is known.\nagain, A/B tests\n\n\nA simpler model is not better.\ntest against baseline model\n\n\nModel quality is sufficient on important data slices.\nrelease tests for models can impose absolute thresholds (e.g., error for slice x must be <5%), to catch large drops in quality, as well as incremental (e.g. the change in error for slice x must be <1% compared to the previously released model).\n\n\nThe model is tested for considerations of inclusion.\nTests that can be run include examining input features to determine if they correlate strongly with protected user categories, and slicing predictions to determine if prediction outputs differ materially when conditioned on different user groups."
+  },
+  {
+    "objectID": "sections/rough.html#tests-for-infrastructure",
+    "href": "sections/rough.html#tests-for-infrastructure",
+    "title": "3  Designing Machine Learning Systems",
+    "section": "8.3 Tests for infrastructure",
+    "text": "8.3 Tests for infrastructure\n\n\n\n\n\n\n\nTest\nExample\n\n\n\n\nTraining is reproducible.\ndeterministic training, ensembling is also suggested\n\n\nModel specs are unit tested.\ntests of API usage and tests of algorithmic correctness\n\n\nThe ML pipeline is Integration tested.\nintegration test should run both continuously as well as with new releases of models or servers, in order to catch problems well before they reach production\n\n\nModel quality is validated before serving.\ntest for both slow degradations in quality over many versions (loose thresholds in tests) as well as sudden drops in a new version (compare 2 versions with tight thresholds)\n\n\nThe model is debuggable.\ninternal tool that allows users to enter examples and see how the a specific model version interprets it\n\n\nModels are canaried before serving.\ntesting that a model successfully loads into production serving binaries and that inference on production input data succeed\n\n\nServing models can be rolled back.\ncan quickly revert to previous version"
+  },
+  {
+    "objectID": "sections/rough.html#tests-for-monitoring",
+    "href": "sections/rough.html#tests-for-monitoring",
+    "title": "3  Designing Machine Learning Systems",
+    "section": "8.4 Tests for monitoring",
+    "text": "8.4 Tests for monitoring\n\n\n\n\n\n\n\nTest\nExample\n\n\n\n\nDependency changes result in notification.\nmake sure that your team is subscribed to and reads announcement lists for all dependencies\n\n\nData invariants hold for inputs.\n(data drift) measure whether data matches the schema and alert when they diverge significantly\n\n\nTraining and serving are not skewed.\nlog a sample of actual serving traffic, compute distribution statistics on the training features and the sampled serving features\n\n\nModels are not too stale.\nmeasure the age of the model at each stage of the training pipeline\n\n\nModels are numerically stable.\nexplicitly monitor the initial occurrence of any NaNs or infinities\n\n\nComputing performance has not regressed.\nslice (compute) performance metrics not just by the versions and components of code, but also by data and model versions\n\n\nPrediction quality has not regressed.\nmeasure statistical bias in predictions, periodically add new training data"
+  },
+  {
+    "objectID": "sections/rough.html#computing-test-score",
+    "href": "sections/rough.html#computing-test-score",
+    "title": "3  Designing Machine Learning Systems",
+    "section": "8.5 Computing test score",
+    "text": "8.5 Computing test score\nEach test: - 0.5 points for executing test manually, with results documented and distributed - 1 point for automatic testing in place, to be repeated regularly Sum score for each of the 4 sections Final test score from taking the MINIMUM of the scores\n\n\n\n\n\n\n\nPoints\nDescription\n\n\n\n\n0\nMore of a research project than a productionized system\n\n\n(0,1]\nNot totally untested, but it is worth considering the possibility of serious holes in reliability.\n\n\n(1,2]\nThere’s been first pass at basic productionization, but additional investment may be needed.\n\n\n(2,3]\nReasonably tested, but it’s possible that more of those tests and procedures may be automated.\n\n\n(3,5]\nStrong levels of automated testing and monitoring, appropriate for mission-critical systems.\n\n\n>5\nExceptional levels of automated testing and monitoring."
+  },
+  {
+    "objectID": "sections/rough.html#machine-learning-operations-mlops-overview-definition-and-architecture",
+    "href": "sections/rough.html#machine-learning-operations-mlops-overview-definition-and-architecture",
+    "title": "3  Rough literature review",
+    "section": "3.2 Machine Learning Operations (MLOps): Overview, Definition, and Architecture",
+    "text": "3.2 Machine Learning Operations (MLOps): Overview, Definition, and Architecture\nThis paper did a literature review, tool review, and a small set of expert interviews to create a definition of what MLOps is and includes. This paper views MLOps as DevOps principles/tooling applied to automating ML.\nThe result was a set of: Principles, like “workflow orchestration coordinates the tasks of ML via DAGs” and “Feedback loops are required to for quality assessment” Technical components, like “model registry” and “monitoring component” Roles, like “data scientist” and “DevOps engineer” Architecture, which is visualized in one of the most confusing (and worst IMO) diagrams I have ever seen 🤨\nBig takeaway is that MLOps addresses the problem of data scientists managing ML workflows too manually\nThey create a paragraph-long definition, with this summary: “Essentially, MLOps aims to facilitate the creation of machine learning products by leveraging these principles: CI/CD automation, workflow orchestration, reproducibility; versioning of data, model, and code; collaboration; continuous ML training and evaluation; ML metadata tracking and logging; continuous monitoring; and feedback loops.”"
+  },
+  {
+    "objectID": "sections/rough.html#mlops-principles",
+    "href": "sections/rough.html#mlops-principles",
+    "title": "3  Rough literature review",
+    "section": "3.3 MLOps Principles",
+    "text": "3.3 MLOps Principles\nFrom INNOQ (consulting) See adoption as 3 levels:\n\nmanual\nml pipeline\nci/cd\n\nContinuous X MLOps is an ML engineering culture that includes the following practices: Ci/CD but also ct(raining)/cm(monitoring)\nTalked a lot about the point system paper I had also seen ML scorecard\nLots of discussion around what reproducibility looks like: data versioning, version control, deploying feature engineering with model. They specifically mention that the same programming language should be used for training and deployment.\nThere is the idea of “loosely coupled architecture” which means that teams can test and deploy applications without requiring orchestration with other services. They suggest using cookiecutter templates to help with this, which doesn’t seem to fit the full criteria of what is described as loosely coupled architecture???"
+  },
+  {
+    "objectID": "sections/rough.html#googles-practitioners-guide-to-mlops",
+    "href": "sections/rough.html#googles-practitioners-guide-to-mlops",
+    "title": "3  Rough literature review",
+    "section": "3.4 Google’s Practitioners Guide to MLOps",
+    "text": "3.4 Google’s Practitioners Guide to MLOps\nThis white paper starts out with an overview of GCP’s perspective on the MLOps lifecycle and finishes with a focus on processes and capabilities.\nThis paper understands the MLOps cycle as seven stages, which are not totally sequential but somewhat iterative and integrated:\n\nFor this paper, it might not really be MLOps unless you are doing continuous retraining, although they do say things like, “If the ML system requires continuous training…”\nThis white paper outlines a set of core technical capabilities like ML pipelines, model training, etc.\nThere are three of these technical capabilities that our MLOps OSS tools aim to meet:\nModel serving: Outlines different ways to serve models for prediction (including making online, offline/batch, streaming, and embedded predictions) and then talks about more advanced techniques like composite prediction routines (invoking models hierarchically).\nModel monitoring: Encompasses both ops monitoring (like latency) and ML monitoring (like accuracy).\nModel registry: Outlines the basics and extends to governing model launching from the registry."
+  },
+  {
+    "objectID": "sections/rough.html#from-concept-drift-to-model-degradation-an-overview-on-performance-aware-drift-detectors",
+    "href": "sections/rough.html#from-concept-drift-to-model-degradation-an-overview-on-performance-aware-drift-detectors",
+    "title": "3  Rough literature review",
+    "section": "3.5 From Concept Drift to Model Degradation: An Overview on Performance-Aware Drift Detectors",
+    "text": "3.5 From Concept Drift to Model Degradation: An Overview on Performance-Aware Drift Detectors\nThis paper outlines different kinds of concept drift and different names that are used for them. Concept drift can happen with different patterns in time:"
+  },
+  {
+    "objectID": "sections/rough.html#ml-scorecard",
+    "href": "sections/rough.html#ml-scorecard",
+    "title": "3  Rough literature review",
+    "section": "3.6 ML scorecard",
+    "text": "3.6 ML scorecard\nNotes from The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction By: Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, D. Sculley\n\n3.6.1 Tests for features and data\n\n\n\n\n\n\n\nTest\nExample\n\n\n\n\nFeature expectations are captured in a schema.\nwriting down expectations, then compare to data\n\n\nAll features are beneficial.\nand then compare them to the data\n\n\nNo feature’s cost is too much.\nconsider not only added inference latency and RAM usage, but also upstream data dependencies\n\n\nFeatures adhere to meta-level requirements.\nprogrammatically enforce these requirements (such as user privacy), so that all models in production properly adhere to them.\n\n\nThe data pipeline has appropriate privacy controls.\ntest that access to pipeline data is controlled as tightly as the access to raw user data, especially for data sources that haven’t previously been used in ML. Finally, test that any user-requested data deletion propagates to the data in the ML training pipeline, and to any learned models\n\n\nNew features can be added quickly.\ndetermine what is considered “quickly”, suggested 1-2 months\n\n\nAll input feature code is tested.\nbugs in features may be almost impossible to detect once they have entered the datageneration process\n\n\n\n\n\n3.6.2 Tests for model development\n\n\n\n\n\n\n\nTest\nExample\n\n\n\n\nModel specs are reviewed and submitted.\neverything is in a repo\n\n\nOffline and online metrics correlate.\ncheck your bias, do A/B tests (even if small scale)\n\n\nAll hyperparameters have been tuned.\ngrid search, or other internal hyperparameter tuning\n\n\nThe impact of model staleness is known.\nagain, A/B tests\n\n\nA simpler model is not better.\ntest against baseline model\n\n\nModel quality is sufficient on important data slices.\nrelease tests for models can impose absolute thresholds (e.g., error for slice x must be <5%), to catch large drops in quality, as well as incremental (e.g. the change in error for slice x must be <1% compared to the previously released model).\n\n\nThe model is tested for considerations of inclusion.\nTests that can be run include examining input features to determine if they correlate strongly with protected user categories, and slicing predictions to determine if prediction outputs differ materially when conditioned on different user groups.\n\n\n\n\n\n3.6.3 Tests for infrastructure\n\n\n\n\n\n\n\nTest\nExample\n\n\n\n\nTraining is reproducible.\ndeterministic training, ensembling is also suggested\n\n\nModel specs are unit tested.\ntests of API usage and tests of algorithmic correctness\n\n\nThe ML pipeline is Integration tested.\nintegration test should run both continuously as well as with new releases of models or servers, in order to catch problems well before they reach production\n\n\nModel quality is validated before serving.\ntest for both slow degradations in quality over many versions (loose thresholds in tests) as well as sudden drops in a new version (compare 2 versions with tight thresholds)\n\n\nThe model is debuggable.\ninternal tool that allows users to enter examples and see how the a specific model version interprets it\n\n\nModels are canaried before serving.\ntesting that a model successfully loads into production serving binaries and that inference on production input data succeed\n\n\nServing models can be rolled back.\ncan quickly revert to previous version\n\n\n\n\n\n3.6.4 Tests for monitoring\n\n\n\n\n\n\n\nTest\nExample\n\n\n\n\nDependency changes result in notification.\nmake sure that your team is subscribed to and reads announcement lists for all dependencies\n\n\nData invariants hold for inputs.\n(data drift) measure whether data matches the schema and alert when they diverge significantly\n\n\nTraining and serving are not skewed.\nlog a sample of actual serving traffic, compute distribution statistics on the training features and the sampled serving features\n\n\nModels are not too stale.\nmeasure the age of the model at each stage of the training pipeline\n\n\nModels are numerically stable.\nexplicitly monitor the initial occurrence of any NaNs or infinities\n\n\nComputing performance has not regressed.\nslice (compute) performance metrics not just by the versions and components of code, but also by data and model versions\n\n\nPrediction quality has not regressed.\nmeasure statistical bias in predictions, periodically add new training data\n\n\n\n\n\n3.6.5 Computing test score\nEach test: - 0.5 points for executing test manually, with results documented and distributed - 1 point for automatic testing in place, to be repeated regularly Sum score for each of the 4 sections Final test score from taking the MINIMUM of the scores\n\n\n\n\n\n\n\nPoints\nDescription\n\n\n\n\n0\nMore of a research project than a productionized system\n\n\n(0,1]\nNot totally untested, but it is worth considering the possibility of serious holes in reliability.\n\n\n(1,2]\nThere’s been first pass at basic productionization, but additional investment may be needed.\n\n\n(2,3]\nReasonably tested, but it’s possible that more of those tests and procedures may be automated.\n\n\n(3,5]\nStrong levels of automated testing and monitoring, appropriate for mission-critical systems.\n\n\n>5\nExceptional levels of automated testing and monitoring."
+  }
+]

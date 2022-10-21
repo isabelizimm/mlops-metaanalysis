@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Meta-analysis of the open source ecosystem of machine learning operations - 3&nbsp; Rough literature review</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../sections/proposal.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rough literature review</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Meta-analysis of the open source ecosystem of machine learning operations</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Abstract</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/proposal.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Project proposal</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../sections/rough.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rough literature review</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#designing-machine-learning-systems" id="toc-designing-machine-learning-systems" class="nav-link active" data-scroll-target="#designing-machine-learning-systems"><span class="toc-section-number">3.1</span>  Designing Machine Learning Systems</a></li>
+  <li><a href="#machine-learning-operations-mlops-overview-definition-and-architecture" id="toc-machine-learning-operations-mlops-overview-definition-and-architecture" class="nav-link" data-scroll-target="#machine-learning-operations-mlops-overview-definition-and-architecture"><span class="toc-section-number">3.2</span>  Machine Learning Operations (MLOps): Overview, Definition, and Architecture</a></li>
+  <li><a href="#mlops-principles" id="toc-mlops-principles" class="nav-link" data-scroll-target="#mlops-principles"><span class="toc-section-number">3.3</span>  MLOps Principles</a></li>
+  <li><a href="#googles-practitioners-guide-to-mlops" id="toc-googles-practitioners-guide-to-mlops" class="nav-link" data-scroll-target="#googles-practitioners-guide-to-mlops"><span class="toc-section-number">3.4</span>  Google’s Practitioners Guide to MLOps</a></li>
+  <li><a href="#from-concept-drift-to-model-degradation-an-overview-on-performance-aware-drift-detectors" id="toc-from-concept-drift-to-model-degradation-an-overview-on-performance-aware-drift-detectors" class="nav-link" data-scroll-target="#from-concept-drift-to-model-degradation-an-overview-on-performance-aware-drift-detectors"><span class="toc-section-number">3.5</span>  From Concept Drift to Model Degradation: An Overview on Performance-Aware Drift Detectors</a></li>
+  <li><a href="#ml-scorecard" id="toc-ml-scorecard" class="nav-link" data-scroll-target="#ml-scorecard"><span class="toc-section-number">3.6</span>  ML scorecard</a>
+  <ul class="collapse">
+  <li><a href="#tests-for-features-and-data" id="toc-tests-for-features-and-data" class="nav-link" data-scroll-target="#tests-for-features-and-data"><span class="toc-section-number">3.6.1</span>  Tests for features and data</a></li>
+  <li><a href="#tests-for-model-development" id="toc-tests-for-model-development" class="nav-link" data-scroll-target="#tests-for-model-development"><span class="toc-section-number">3.6.2</span>  Tests for model development</a></li>
+  <li><a href="#tests-for-infrastructure" id="toc-tests-for-infrastructure" class="nav-link" data-scroll-target="#tests-for-infrastructure"><span class="toc-section-number">3.6.3</span>  Tests for infrastructure</a></li>
+  <li><a href="#tests-for-monitoring" id="toc-tests-for-monitoring" class="nav-link" data-scroll-target="#tests-for-monitoring"><span class="toc-section-number">3.6.4</span>  Tests for monitoring</a></li>
+  <li><a href="#computing-test-score" id="toc-computing-test-score" class="nav-link" data-scroll-target="#computing-test-score"><span class="toc-section-number">3.6.5</span>  Computing test score</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rough literature review</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="designing-machine-learning-systems" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="designing-machine-learning-systems"><span class="header-section-number">3.1</span> Designing Machine Learning Systems</h2>
+<p>This book is about ML systems holistically, from model development through to model monitoring and retraining schedules</p>
+<p>Most relevant chapters are Ch 1, 2, 7, 8, 10, maybe 11</p>
+<p>From my perspective a lot of the narrative in this book assumes folks are using deep learning models, but most models in production are not deep learning</p>
+<p>One paragraph at the beginning of Ch 7 seems to indicate that wrapping a model in an API such as FastAPI is easy (“all you have to do is…”) but then goes on to say that “deploying is easy if you ignore all the hard parts”</p>
+<p>Several chapters highlight the need for managing multiple models, which can motivate some work on our part on model registry tooling I thought it was interesting how this book categorizes tools as orchestrators, schedulers, MLOps platforms, among others.</p>
+<p>IMO our tools like vetiver don’t neatly fall into any of the tool categories outlined in this book; they work with an orchestrator or you could use them as part of your MLOps platform. Is that a problem? How do we best explain what these tools do?</p>
+<p>There is a lot of discussion around using REST APIs. The main concern is the complexity with many APIs making many requests to each other, so brokers such as Kafka are held to the highest standard. (The trade off here of complexity is not worth it at this point?) (Actually, GitHub is moving more to REST, albeit away from GraphQL.)</p>
+<p>There’s a different discussion about “reasonable scale” in Chapter 10, that is, companies that work with gigabytes or maybe terabytes of data a day. I think vetiver is an option for “reasonable scale” companies/models, where a REST API still makes the most sense. I spent a while wrestling with the online (predictions generated and returned as soon as requests arrive) vs.&nbsp;batch (predictions generated periodically).</p>
+<p>I am debating changing my own language to synchronous vs.&nbsp;asynchronous. How to use the best language for clarity? “Batch prediction is a workaround for when online prediction isn’t cheap enough or fast enough.”</p>
+<p>Noting another best practice: Having two different pipelines for training and inference is a common source for bugs for ML in production.</p>
+<p>Monitoring toolbox: logs, dashboards, alerts. Depending on how DIY a developer is feeling, we have about 0.5/3 of these things. (What do we feel is our monitoring toolbox? How much is infrastructure dependent?) Michael</p>
+</section>
+<section id="machine-learning-operations-mlops-overview-definition-and-architecture" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="machine-learning-operations-mlops-overview-definition-and-architecture"><span class="header-section-number">3.2</span> Machine Learning Operations (MLOps): Overview, Definition, and Architecture</h2>
+<p>This paper did a literature review, tool review, and a small set of expert interviews to create a definition of what MLOps is and includes. This paper views MLOps as DevOps principles/tooling applied to automating ML.</p>
+<p>The result was a set of: Principles, like “workflow orchestration coordinates the tasks of ML via DAGs” and “Feedback loops are required to for quality assessment” Technical components, like “model registry” and “monitoring component” Roles, like “data scientist” and “DevOps engineer” Architecture, which is visualized in one of the most confusing (and worst IMO) diagrams I have ever seen 🤨</p>
+<p>Big takeaway is that MLOps addresses the problem of data scientists managing ML workflows too manually</p>
+<p>They create a paragraph-long definition, with this summary: “Essentially, MLOps aims to facilitate the creation of machine learning products by leveraging these principles: CI/CD automation, workflow orchestration, reproducibility; versioning of data, model, and code; collaboration; continuous ML training and evaluation; ML metadata tracking and logging; continuous monitoring; and feedback loops.”</p>
+</section>
+<section id="mlops-principles" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="mlops-principles"><span class="header-section-number">3.3</span> MLOps Principles</h2>
+<p>From INNOQ (consulting) See adoption as 3 levels:</p>
+<ul>
+<li><p>manual</p></li>
+<li><p>ml pipeline</p></li>
+<li><p>ci/cd</p></li>
+</ul>
+<p>Continuous X MLOps is an ML engineering culture that includes the following practices: Ci/CD but also ct(raining)/cm(monitoring)</p>
+<p>Talked a lot about the point system paper I had also seen ML scorecard</p>
+<p>Lots of discussion around what reproducibility looks like: data versioning, version control, deploying feature engineering with model. They specifically mention that the same programming language should be used for training and deployment.</p>
+<p>There is the idea of “loosely coupled architecture” which means that teams can test and deploy applications without requiring orchestration with other services. They suggest using cookiecutter templates to help with this, which doesn’t seem to fit the full criteria of what is described as loosely coupled architecture???</p>
+</section>
+<section id="googles-practitioners-guide-to-mlops" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="googles-practitioners-guide-to-mlops"><span class="header-section-number">3.4</span> Google’s Practitioners Guide to MLOps</h2>
+<p>This white paper starts out with an overview of GCP’s perspective on the MLOps lifecycle and finishes with a focus on processes and capabilities.</p>
+<p>This paper understands the MLOps cycle as seven stages, which are not totally sequential but somewhat iterative and integrated:</p>
+<p><img src="../images/wkflw.png" class="img-fluid"></p>
+<p>For this paper, it might not really be MLOps unless you are doing continuous retraining, although they do say things like, “If the ML system requires continuous training…”</p>
+<p>This white paper outlines a set of core technical capabilities like ML pipelines, model training, etc.</p>
+<p>There are three of these technical capabilities that our MLOps OSS tools aim to meet:</p>
+<p>Model serving: Outlines different ways to serve models for prediction (including making online, offline/batch, streaming, and embedded predictions) and then talks about more advanced techniques like composite prediction routines (invoking models hierarchically).</p>
+<p>Model monitoring: Encompasses both ops monitoring (like latency) and ML monitoring (like accuracy).</p>
+<p>Model registry: Outlines the basics and extends to governing model launching from the registry.</p>
+</section>
+<section id="from-concept-drift-to-model-degradation-an-overview-on-performance-aware-drift-detectors" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="from-concept-drift-to-model-degradation-an-overview-on-performance-aware-drift-detectors"><span class="header-section-number">3.5</span> From Concept Drift to Model Degradation: An Overview on Performance-Aware Drift Detectors</h2>
+<p>This paper outlines different kinds of concept drift and different names that are used for them. Concept drift can happen with different patterns in time:</p>
+<p><img src="../images/drift.png" class="img-fluid"></p>
+</section>
+<section id="ml-scorecard" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="ml-scorecard"><span class="header-section-number">3.6</span> ML scorecard</h2>
+<p>Notes from <a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/aad9f93b86b7addfea4c419b9100c6cdd26cacea.pdf"><em>The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction</em></a> By: Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, D. Sculley</p>
+<section id="tests-for-features-and-data" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="tests-for-features-and-data"><span class="header-section-number">3.6.1</span> Tests for features and data</h3>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 79%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Feature expectations are captured in a schema.</td>
+<td>writing down expectations, then compare to data</td>
+</tr>
+<tr class="even">
+<td>All features are beneficial.</td>
+<td>and then compare them to the data</td>
+</tr>
+<tr class="odd">
+<td>No feature’s cost is too much.</td>
+<td>consider not only added inference latency and RAM usage, but also upstream data dependencies</td>
+</tr>
+<tr class="even">
+<td>Features adhere to meta-level requirements.</td>
+<td>programmatically enforce these requirements (such as user privacy), so that all models in production properly adhere to them.</td>
+</tr>
+<tr class="odd">
+<td>The data pipeline has appropriate privacy controls.</td>
+<td>test that access to pipeline data is controlled as tightly as the access to raw user data, especially for data sources that haven’t previously been used in ML. Finally, test that any user-requested data deletion propagates to the data in the ML training pipeline, and to any learned models</td>
+</tr>
+<tr class="even">
+<td>New features can be added quickly.</td>
+<td>determine what is considered “quickly”, suggested 1-2 months</td>
+</tr>
+<tr class="odd">
+<td>All input feature code is tested.</td>
+<td>bugs in features may be almost impossible to detect once they have entered the datageneration process</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tests-for-model-development" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="tests-for-model-development"><span class="header-section-number">3.6.2</span> Tests for model development</h3>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 77%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model specs are reviewed and submitted.</td>
+<td>everything is in a repo</td>
+</tr>
+<tr class="even">
+<td>Offline and online metrics correlate.</td>
+<td>check your bias, do A/B tests (even if small scale)</td>
+</tr>
+<tr class="odd">
+<td>All hyperparameters have been tuned.</td>
+<td>grid search, or other internal hyperparameter tuning</td>
+</tr>
+<tr class="even">
+<td>The impact of model staleness is known.</td>
+<td>again, A/B tests</td>
+</tr>
+<tr class="odd">
+<td>A simpler model is not better.</td>
+<td>test against baseline model</td>
+</tr>
+<tr class="even">
+<td>Model quality is sufficient on important data slices.</td>
+<td>release tests for models can impose absolute thresholds (e.g., error for slice x must be &lt;5%), to catch large drops in quality, as well as incremental (e.g.&nbsp;the change in error for slice x must be &lt;1% compared to the previously released model).</td>
+</tr>
+<tr class="odd">
+<td>The model is tested for considerations of inclusion.</td>
+<td>Tests that can be run include examining input features to determine if they correlate strongly with protected user categories, and slicing predictions to determine if prediction outputs differ materially when conditioned on different user groups.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tests-for-infrastructure" class="level3" data-number="3.6.3">
+<h3 data-number="3.6.3" class="anchored" data-anchor-id="tests-for-infrastructure"><span class="header-section-number">3.6.3</span> Tests for infrastructure</h3>
+<table class="table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Training is reproducible.</td>
+<td>deterministic training, ensembling is also suggested</td>
+</tr>
+<tr class="even">
+<td>Model specs are unit tested.</td>
+<td>tests of API usage and tests of algorithmic correctness</td>
+</tr>
+<tr class="odd">
+<td>The ML pipeline is Integration tested.</td>
+<td>integration test should run both continuously as well as with new releases of models or servers, in order to catch problems well before they reach production</td>
+</tr>
+<tr class="even">
+<td>Model quality is validated before serving.</td>
+<td>test for both slow degradations in quality over many versions (loose thresholds in tests) as well as sudden drops in a new version (compare 2 versions with tight thresholds)</td>
+</tr>
+<tr class="odd">
+<td>The model is debuggable.</td>
+<td>internal tool that allows users to enter examples and see how the a specific model version interprets it</td>
+</tr>
+<tr class="even">
+<td>Models are canaried before serving.</td>
+<td>testing that a model successfully loads into production serving binaries and that inference on production input data succeed</td>
+</tr>
+<tr class="odd">
+<td>Serving models can be rolled back.</td>
+<td>can quickly revert to previous version</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tests-for-monitoring" class="level3" data-number="3.6.4">
+<h3 data-number="3.6.4" class="anchored" data-anchor-id="tests-for-monitoring"><span class="header-section-number">3.6.4</span> Tests for monitoring</h3>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 73%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Test</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dependency changes result in notification.</td>
+<td>make sure that your team is subscribed to and reads announcement lists for all dependencies</td>
+</tr>
+<tr class="even">
+<td>Data invariants hold for inputs.</td>
+<td>(data drift) measure whether data matches the schema and alert when they diverge significantly</td>
+</tr>
+<tr class="odd">
+<td>Training and serving are not skewed.</td>
+<td>log a sample of actual serving traffic, compute distribution statistics on the training features and the sampled serving features</td>
+</tr>
+<tr class="even">
+<td>Models are not too stale.</td>
+<td>measure the age of the model at each stage of the training pipeline</td>
+</tr>
+<tr class="odd">
+<td>Models are numerically stable.</td>
+<td>explicitly monitor the initial occurrence of any NaNs or infinities</td>
+</tr>
+<tr class="even">
+<td>Computing performance has not regressed.</td>
+<td>slice (compute) performance metrics not just by the versions and components of code, but also by data and model versions</td>
+</tr>
+<tr class="odd">
+<td>Prediction quality has not regressed.</td>
+<td>measure statistical bias in predictions, periodically add new training data</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="computing-test-score" class="level3" data-number="3.6.5">
+<h3 data-number="3.6.5" class="anchored" data-anchor-id="computing-test-score"><span class="header-section-number">3.6.5</span> Computing test score</h3>
+<p>Each test: - 0.5 points for executing test manually, with results documented and distributed - 1 point for automatic testing in place, to be repeated regularly Sum score for each of the 4 sections Final test score from taking the MINIMUM of the scores</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Points</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>More of a research project than a productionized system</td>
+</tr>
+<tr class="even">
+<td>(0,1]</td>
+<td>Not totally untested, but it is worth considering the possibility of serious holes in reliability.</td>
+</tr>
+<tr class="odd">
+<td>(1,2]</td>
+<td>There’s been first pass at basic productionization, but additional investment may be needed.</td>
+</tr>
+<tr class="even">
+<td>(2,3]</td>
+<td>Reasonably tested, but it’s possible that more of those tests and procedures may be automated.</td>
+</tr>
+<tr class="odd">
+<td>(3,5]</td>
+<td>Strong levels of automated testing and monitoring, appropriate for mission-critical systems.</td>
+</tr>
+<tr class="even">
+<td>&gt;5</td>
+<td>Exceptional levels of automated testing and monitoring.</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../sections/proposal.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Project proposal</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
