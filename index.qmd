@@ -1,10 +1,126 @@
 ---
-title: "Abstract"
-author: Isabel Zimmerman
-date: 10/20/2022
-format: 
-    html: 
-        toc: true
+title: Meta-analysis of the machine learning operations open source ecosystem
+subtitle: Florida Polytechnic University, Spring 2022
+author: 
+  - Isabel Zimmerman
+  - Reinaldo Sanchez-Arias, Ph.D., Advisor
+date: 2022-11-28
+toc: true
+format:
+  html:
+    code-tools: true
+    self-contained: true
 ---
 
+# Abstract
+
+Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently. These practices are part of the machine learning lifecycle, occurring after training and tuning a model. This paper will explore the open source MLOps ecosystem as a whole and highlights a few specific tools of interest; it will explore relevant topics such as the maturity of open source MLOps, clustering of types of MLOps tools, and an overview of key players in the space. There is currently no baseline for the current state of the art in this space, so this work will give an overview of the state of the art. It seeks to highlight the knowledge necessary for practitioners and academics select an open source machine leraning operations tool (or tools) to suit the requirements of their own data science projects.
+
+# Introduction
+
+The rise of MLOps:
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/g/11h1vbjpbg","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=%2Fg%2F11h1vbjpbg","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+
+The importance of the right tooling:
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("RELATED_QUERIES", {"comparisonItem":[{"keyword":"mlops","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=mlops","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+
+# Literature Review
+
+A level of domain knowledge of what machine learning operations entails is necessary before understanding the open source ecosystem as a whole. Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently.
+
+MLOps frameworks have a broad scope. Projects generally fall into a few different suggested categories: orchestrators, workflow management, and ML platforms (Huyen). However, with the emerging nature of this software, it may be useful to make these categories more granular for better comprehension and segregation of tasks.
+
+Open source projects follow a life cycle, more generally tracked as a [maturity model](https://open-source-quality.github.io/2018/02/01/open-source-maturity-model.html) or hype cycle. Maturity cycles start with an unkown open source project that then goes into rapid adoption (trigger phase), a peak of activity beyond early adopters (hype phase), a by rapid decrease as users lose interest or are unable to use the project as intended (crystallization phase), and a final general plateau for users who will continue to use this product going forward (productivity phase). This cycle applies to not only an individual project, but also entire ecosystems as a whole.
+
+![](https://open-source-quality.github.io/hype-cycle-chart.png)
+
+When looking at open source projects, it becomes more difficult to figure out where an industry is on the maturity model as download rates are not available like in traditional software. It is possible to proxy this information by looking at other metrics such as stars, contributions, and general repository acitivity.
+
+
+## The interdisciplinary nature of proposed research
+
+Machine learning operations has a naturally interdisciplinary nature. In fact, many of the reasons MLOps is so difficult is due to the span of knowledge necessary for successful operationalization of models. In reseaching this topic, it is necessary to have knowledge of data wrangling and statistical modeling to create the model (as taught in *CAP 5320* - Data Wrangling and Exploratory Data Analysis and *CAP 5765* - Computational Data Analysis), along with knowledge of software engineering best practices to have a stable deployment (*CEN 5035* - Advanced Software Engineering) and visualization skills to continually monitor model performance (*CAP 5735* - Data Visualization and Reproducible Research).
+
+# Deliverables
+
+The intended deliverable of this project is a paper that both lays out an overview of the open source MLOps ecosystem as a whole and highlights a few specific tools of interest. This paper will delve into topics such as the maturity model of open source MLOps, clustering of types of MLOps tools, and an overview of key players in the space.
+
+## Expected outcomes
+
+(*user personas: academics and practitioners?)
+
+- Readers* will understand the implications of machine learning operations in open source software.
+- Readers* will be able to view and track the maturity of the machine learning operations open source ecosystem.
+- Readers* will know the types of tools available for operationalization of models.
+- Readers* will have the knowledge to put together an appropiate machine learning operations framework for their use case.
+
+Others:
+
+- look into best practices ?
+- https://emeraldreverie.org/2019/12/19/visualising-the-community-contributions-to-ansible-modules/
+- ^ visualizing community contributions
+- could go deep into community (ie, PR time to merge, growth rate of each repo, etc)
+- https://emeraldreverie.org/2019/11/12/ansible-modules-contribution-structure/
+
+## Objective timeline
+
+This project will require data collection of many open source projects; to curate this list of projects, sources such as Chip Huyen's blog post, Awesome MLOps, and GitHub tags will be used. From this list of repositories, further data on these tools can be scraped from the GitHub API. This data will give information such as: description, stars, number of contributors, forks, language, open issues, etc. Once gathered, exploratory data analysis will give a description of the ecosystem as a whole. With this information, it will be possible to use clustering algorithms such as k-means or similarity aggregation to group these tools. 
+
+```{python}
+#| code-fold: true
+#| label: gantt
+#| fig-cap: "Project Gantt chart"
+#| output: true
+import pandas as pd
+from siuba import *
+from plotnine import *
+
+objectives = pd.DataFrame({
+  'task': ['literature review', 'prepare project proposal', 'data collection', 'data cleaning', 'exploratory data analysis', 'build maturity models', 'build clustering models', 'prepare visual report'],
+  'start': pd.to_datetime(['2022-08-30', '2022-10-15', '2023-01-09', '2023-01-09', '2023-01-23', '2023-02-27', '2023-02-27', '2023-03-27']),
+  'end': pd.to_datetime(['2022-11-30', '2022-11-30', '2023-01-23', '2023-02-06', '2023-02-27', '2023-03-27', '2023-03-27', '2023-04-17'])
+})
+
+(objectives
+  >> arrange(_.start)
+  >> (ggplot(aes(x='start', xend='end', y='task', yend='task'))
+    + geom_segment(size=15, color='#a7a9ac')
+  )
+    + xlab('date')
+    + ylab('')
+    + theme_tufte()
+    + theme(axis_text_x=element_text(angle=15))
+)
+
+```
+
+## Further work
+
+The discoveries from this work could easily be extended further. One possible outcome could be an opinionated workflow for a specific task built with a selection of the tools analyzed; this workflow would contribute to these open source tools through documentation and tutorials, if not also code contributions. Another outcome could be a second paper in the style of "Ten simple rules for X", where the topic would be related to machine learning operations.
+
+# References
+
+Books:
+
+-   [*Designing Machine Learning Systems*](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen
+
+Articles:
+
+-   ["Machine Learning Operations (MLOps): Overview, Definition, and Architecture"](https://arxiv.org/abs/2205.02302) by Kreuzberger et al
+-   ["Towards Observability for Production Machine Learning Pipelines"](https://arxiv.org/pdf/2108.13557.pdf) by Shankar et al
+-   ["The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction"](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/aad9f93b86b7addfea4c419b9100c6cdd26cacea.pdf) by Breck et al
+-   ["Operationalizing Machine Learning: An Interview Study"](https://arxiv.org/pdf/2209.09125.pdf) by Shankar et al
+-   ["Context: The Missing Piece in the Machine Learning Lifecycle"](https://rise.cs.berkeley.edu/wp-content/uploads/2019/02/Flor_CMI_18_CameraReady.pdf)
+-   ["A Comparison of Open Source Tools for Data Science"](http://jisar.org/2016-9/n2/JISARv9n2p4.pdf)
+-   ["Open-Source Network Simulation Tools: An Overview"](https://www.researchgate.net/profile/Mangesh-Ghonge/publication/249998863_Open-Source_Network_Simulation_Tools_An_Overview/links/0046351e8eec948156000000/Open-Source-Network-Simulation-Tools-An-Overview.pdf)
+-   ["Demystifying mlops and presenting a recipe for the selection of open-source tools"](https://www.mdpi.com/2076-3417/11/19/8861)
+
+
+Web content:
+
+-   [*How ML Breaks: A Decade of Outages for One Large ML Pipeline*](https://www.youtube.com/watch?v=hBMHohkRgAA) by Papasian and Underwood
+-   [*Google's Practitioners Guide to MLOps*](https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf) by Salama et al
+-   [*MLOps Is a Mess But That's to be Expected*](https://www.mihaileric.com/posts/mlops-is-a-mess/)
 
