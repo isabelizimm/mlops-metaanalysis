@@ -17,7 +17,7 @@ One paragraph at the beginning of Ch 7 seems to indicate that wrapping a model i
 
 Several chapters highlight the need for managing multiple models, which can motivate some work on our part on model registry tooling I thought it was interesting how this book categorizes tools as orchestrators, schedulers, MLOps platforms, among others.
 
-IMO our tools like vetiver don't neatly fall into any of the tool categories outlined in this book; they work with an orchestrator or you could use them as part of your MLOps platform. Is that a problem? How do we best explain what these tools do?
+ Is that a problem? How do we best explain what these tools do?
 
 There is a lot of discussion around using REST APIs. The main concern is the complexity with many APIs making many requests to each other, so brokers such as Kafka are held to the highest standard. (The trade off here of complexity is not worth it at this point?) (Actually, GitHub is moving more to REST, albeit away from GraphQL.)
 
