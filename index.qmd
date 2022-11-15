@@ -14,29 +14,32 @@ format:
 
 # Abstract
 
-Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently. These practices are part of the machine learning lifecycle, occurring after training and tuning a model. This paper will explore the open source MLOps ecosystem as a whole and highlights a few specific tools of interest; it will explore relevant topics such as the maturity of open source MLOps, clustering of types of MLOps tools, and an overview of key players in the space. There is currently no baseline for the current state of the art in this space, so this work will give an overview of the state of the art. It seeks to highlight the knowledge necessary for practitioners and academics select an open source machine leraning operations tool (or tools) to suit the requirements of their own data science projects.
+Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently. This paper will explore the open source MLOps ecosystem as a whole and highlight tools of interest; it will explore relevant topics such as the maturity of open source MLOps, clustering the types of MLOps tools, and an overview of key players in the space. This work will give an overview of the state of the art, as there is currently no baseline for the current state of the art in this space. It seeks to highlight the knowledge necessary for practitioners and academics select an open source machine leraning operations tool (or tools) to suit their data science projects.
 
 # Introduction
 
-The rise of MLOps:
+With the proliferation of data science tools, an entire ecosystem of frameworks to bring the subsequent machine learning models to production has emerged. Machine learning operations attempts to shorten the time from developing a new machine learning model to  The rise of MLOps:
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/g/11h1vbjpbg","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=%2Fg%2F11h1vbjpbg","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
-The importance of the right tooling:
+However, even with increasing adoption of MLOps systems, relatively little has been written on the state of the ecosystem as a whole.
 
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("RELATED_QUERIES", {"comparisonItem":[{"keyword":"mlops","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=mlops","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 
 # Literature Review
 
-A level of domain knowledge of what machine learning operations entails is necessary before understanding the open source ecosystem as a whole. Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently.
+A level of domain knowledge of what machine learning operations entails is necessary before understanding the open source ecosystem as a whole. Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently. 
 
-MLOps frameworks have a broad scope. Projects generally fall into a few different suggested categories: orchestrators, workflow management, and ML platforms (Huyen). However, with the emerging nature of this software, it may be useful to make these categories more granular for better comprehension and segregation of tasks.
+![](https://i0.wp.com/www.phdata.io/wp-content/uploads/2021/07/code-validate-deploy-loop-1536x639.png)
+
+There are many choices to make when building an MLOps system. An abundance of open source solutions exist and will be discussed at length, but there are also off-the-shelf platforms as paid, proprietary solutions. 
+
+Projects generally fall into a few different categories: all-in-one, data pipeline, hardware, infrastructure, modeling and training, and serving (Huyen). Some projects span multiple categories. With the growing interest in this field, these categories may have changed since the inception of these suggested categories. 
 
 Open source projects follow a life cycle, more generally tracked as a [maturity model](https://open-source-quality.github.io/2018/02/01/open-source-maturity-model.html) or hype cycle. Maturity cycles start with an unkown open source project that then goes into rapid adoption (trigger phase), a peak of activity beyond early adopters (hype phase), a by rapid decrease as users lose interest or are unable to use the project as intended (crystallization phase), and a final general plateau for users who will continue to use this product going forward (productivity phase). This cycle applies to not only an individual project, but also entire ecosystems as a whole.
 
 ![](https://open-source-quality.github.io/hype-cycle-chart.png)
 
-When looking at open source projects, it becomes more difficult to figure out where an industry is on the maturity model as download rates are not available like in traditional software. It is possible to proxy this information by looking at other metrics such as stars, contributions, and general repository acitivity.
+It is difficult to figure out where open source ecosystems lie on the maturity model as download rates are not accurately available. It is possible to proxy this information by looking at other metrics such as stars, contributions, and other repository acitivity.
 
 
 ## The interdisciplinary nature of proposed research
@@ -63,10 +66,11 @@ Others:
 - ^ visualizing community contributions
 - could go deep into community (ie, PR time to merge, growth rate of each repo, etc)
 - https://emeraldreverie.org/2019/11/12/ansible-modules-contribution-structure/
+- could have a case study using a selected software stack
 
 ## Objective timeline
 
-This project will require data collection of many open source projects; to curate this list of projects, sources such as Chip Huyen's blog post, Awesome MLOps, and GitHub tags will be used. From this list of repositories, further data on these tools can be scraped from the GitHub API. This data will give information such as: description, stars, number of contributors, forks, language, open issues, etc. Once gathered, exploratory data analysis will give a description of the ecosystem as a whole. With this information, it will be possible to use clustering algorithms such as k-means or similarity aggregation to group these tools. 
+This project will require data collection of many open source projects; to curate this list of projects, sources such as blog posts, Awesome MLOps, and GitHub tags will be used. From this list of repositories, further data on these tools can be scraped from the GitHub API. This data will give information such as: description, stars, number of contributors, forks, language, open issues, etc. Once gathered, exploratory data analysis will give a description of the ecosystem as a whole. With this information, it will be possible to use clustering algorithms such as k-means or similarity aggregation to group these tools. 
 
 ```{python}
 #| code-fold: true
@@ -78,27 +82,26 @@ from siuba import *
 from plotnine import *
 
 objectives = pd.DataFrame({
-  'task': ['literature review', 'prepare project proposal', 'data collection', 'data cleaning', 'exploratory data analysis', 'build maturity models', 'build clustering models', 'prepare visual report'],
-  'start': pd.to_datetime(['2022-08-30', '2022-10-15', '2023-01-09', '2023-01-09', '2023-01-23', '2023-02-27', '2023-02-27', '2023-03-27']),
-  'end': pd.to_datetime(['2022-11-30', '2022-11-30', '2023-01-23', '2023-02-06', '2023-02-27', '2023-03-27', '2023-03-27', '2023-04-17'])
+  'task': ['review relevant literature', 'prepare project proposal', 'gather data', 'data cleaning and exploration', 'build maturity models', 'build clustering models', 'aggregate visual report'],
+  'start': pd.to_datetime(['2022-08-30', '2022-10-15', '2022-12-01', '2023-01-09', '2023-02-27', '2023-02-27', '2023-03-17']),
+  'end': pd.to_datetime(['2022-11-30', '2022-11-30', '2023-01-23', '2023-02-27', '2023-03-27', '2023-03-27', '2023-04-17'])
 })
 
 (objectives
-  >> arrange(_.start)
-  >> (ggplot(aes(x='start', xend='end', y='task', yend='task'))
+  >> ggplot(aes(x='start', xend='end', y='task', yend='task'))
     + geom_segment(size=15, color='#a7a9ac')
-  )
     + xlab('date')
     + ylab('')
     + theme_tufte()
     + theme(axis_text_x=element_text(angle=15))
-)
+  )
+ 
 
 ```
 
 ## Further work
 
-The discoveries from this work could easily be extended further. One possible outcome could be an opinionated workflow for a specific task built with a selection of the tools analyzed; this workflow would contribute to these open source tools through documentation and tutorials, if not also code contributions. Another outcome could be a second paper in the style of "Ten simple rules for X", where the topic would be related to machine learning operations.
+The discoveries from this work could easily be extended further. One possible outcome could be an opinionated workflow for a specific task built with a selection of the tools analyzed; this workflow would contribute to these open source tools through documentation and tutorials, if not also code contributions. It is possible that this software stack could be used to build an accompanying case study, either to be included inside this paper or as part of another work. Another outcome could be a second paper in the style of "Ten simple rules for X", where the topic would be related to machine learning operations.
 
 # References
 
