@@ -16,30 +16,30 @@ format:
 
 Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently. This paper will explore the open source MLOps ecosystem as a whole and highlight tools of interest; it will explore relevant topics such as the maturity of open source MLOps, clustering the types of MLOps tools, and an overview of key players in the space. This work will give an overview of the state of the art, as there is currently no baseline for the current state of the art in this space. It seeks to highlight the knowledge necessary for practitioners and academics select an open source machine leraning operations tool (or tools) to suit their data science projects.
 
-# Introduction
+# Literature review
 
-With the proliferation of data science tools, an entire ecosystem of frameworks to bring the subsequent machine learning models to production has emerged. Machine learning operations attempts to shorten the time from developing a new machine learning model to  The rise of MLOps:
-
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/g/11h1vbjpbg","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=%2Fg%2F11h1vbjpbg","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
-
-However, even with increasing adoption of MLOps systems, relatively little has been written on the state of the ecosystem as a whole.
-
-
-# Literature Review
-
-A level of domain knowledge of what machine learning operations entails is necessary before understanding the open source ecosystem as a whole. Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently. 
+With the proliferation of data science tools, a secondary ecosystem of frameworks to bring machine learning models to production has emerged. A level of domain knowledge of what machine learning operations entails is necessary before understanding the open source ecosystem as a whole. Machine learning operations, or MLOps, is a set of practices to deploy and maintain machine learning models in production reliably and efficiently. Machine learning operations attempts to shorten the time from developing a new machine learning model to bringing it into production. 
 
 ![](https://i0.wp.com/www.phdata.io/wp-content/uploads/2021/07/code-validate-deploy-loop-1536x639.png)
 
+However, even with increasing adoption of MLOps systems, relatively little has been written on the state of the ecosystem as a whole. The rise of MLOps:
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/g/11h1vbjpbg","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=%2Fg%2F11h1vbjpbg","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+
+
 There are many choices to make when building an MLOps system. An abundance of open source solutions exist and will be discussed at length, but there are also off-the-shelf platforms as paid, proprietary solutions. 
 
-Projects generally fall into a few different categories: all-in-one, data pipeline, hardware, infrastructure, modeling and training, and serving (Huyen). Some projects span multiple categories. With the growing interest in this field, these categories may have changed since the inception of these suggested categories. 
+Projects generally fall into a few different categories: all-in-one, data pipeline, hardware, infrastructure, modeling and training, and serving (Huyen). Some projects span multiple categories. With the growing interest in this field, these categories may have changed since the inception of these suggested categories.
+
+Scorecards such as outlined in "" give practitioners the ability to rate their MLOps systems, gaining points for reduction of technical debt, using best practices, and leveraging continuous integration when possible. These scorecards are used for individual deployments...(using them for rating tools as well?)
 
 Open source projects follow a life cycle, more generally tracked as a [maturity model](https://open-source-quality.github.io/2018/02/01/open-source-maturity-model.html) or hype cycle. Maturity cycles start with an unkown open source project that then goes into rapid adoption (trigger phase), a peak of activity beyond early adopters (hype phase), a by rapid decrease as users lose interest or are unable to use the project as intended (crystallization phase), and a final general plateau for users who will continue to use this product going forward (productivity phase). This cycle applies to not only an individual project, but also entire ecosystems as a whole.
 
 ![](https://open-source-quality.github.io/hype-cycle-chart.png)
 
 It is difficult to figure out where open source ecosystems lie on the maturity model as download rates are not accurately available. It is possible to proxy this information by looking at other metrics such as stars, contributions, and other repository acitivity.
+
+Machine learning operations was first introduced via "Hidden Technical Debt in Machine Learning Systems", unclear where 
 
 
 ## The interdisciplinary nature of proposed research
@@ -61,6 +61,7 @@ The intended deliverable of this project is a paper that both lays out an overvi
 
 Others:
 
+- breakdown by scale (clustering by scale?)
 - look into best practices ?
 - https://emeraldreverie.org/2019/12/19/visualising-the-community-contributions-to-ansible-modules/
 - ^ visualizing community contributions
@@ -95,8 +96,6 @@ objectives = pd.DataFrame({
     + theme_tufte()
     + theme(axis_text_x=element_text(angle=15))
   )
- 
-
 ```
 
 ## Further work
@@ -119,11 +118,5 @@ Articles:
 -   ["A Comparison of Open Source Tools for Data Science"](http://jisar.org/2016-9/n2/JISARv9n2p4.pdf)
 -   ["Open-Source Network Simulation Tools: An Overview"](https://www.researchgate.net/profile/Mangesh-Ghonge/publication/249998863_Open-Source_Network_Simulation_Tools_An_Overview/links/0046351e8eec948156000000/Open-Source-Network-Simulation-Tools-An-Overview.pdf)
 -   ["Demystifying mlops and presenting a recipe for the selection of open-source tools"](https://www.mdpi.com/2076-3417/11/19/8861)
-
-
-Web content:
-
--   [*How ML Breaks: A Decade of Outages for One Large ML Pipeline*](https://www.youtube.com/watch?v=hBMHohkRgAA) by Papasian and Underwood
--   [*Google's Practitioners Guide to MLOps*](https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf) by Salama et al
 -   [*MLOps Is a Mess But That's to be Expected*](https://www.mihaileric.com/posts/mlops-is-a-mess/)
 
