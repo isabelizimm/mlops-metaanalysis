@@ -22,15 +22,13 @@ With the proliferation of machine learning tools, a secondary ecosystem of frame
 
 There are many choices to make when building an MLOps system. MLOps systems formed from open source solutions generally require multiple open source projects to do tasks such as: versioning a model, deploying a model, monitoring deployment, orchestrating tasks, and managing infrastructure. To manage these projects, practitioners can use scorecards to rate their MLOps systems, gaining points for reduction of technical debt, using best practices, and leveraging continuous integration when possible [4].
 
-Each open source project falls into a few different categories to fulfill these different tasks: all-in-one, data pipeline, infrastructure, modeling and training, monitoring, and serving [5]. Some projects span multiple categories.
+Each open source project falls into a few different categories to fulfill these different tasks: all-in-one, data pipeline, infrastructure, modeling and training, monitoring, and serving [5]. Some projects span multiple categories. Current literature on MLOps often focuses on case studies for a certain team [6]. While some papers give some state-of-the-art of MLOps, this field constantly changes, with new tools and frameworks being released [7].
 
-Knowing the maturity of a project is crucial for adoption. Open source projects follow a life cycle, tracked as a maturity model cycle [6]. Maturity cycles start with an unkown open source project that then goes into rapid adoption (trigger phase), a peak of activity beyond early adopters (hype phase), a by rapid decrease as users lose interest or are unable to use the project as intended (crystallization phase), and a final general plateau for users who will continue to use this product going forward (productivity phase). This cycle applies to not only an individual project, but also entire ecosystems as a whole.
+Knowing the maturity of a project is crucial for adoption. Open source projects follow a life cycle, tracked as a maturity model cycle [8]. Maturity cycles start with an unkown open source project that then goes into rapid adoption (trigger phase), a peak of activity beyond early adopters (hype phase), a by rapid decrease as users lose interest or are unable to use the project as intended (crystallization phase), and a final general plateau for users who will continue to use this product going forward (productivity phase). This cycle applies to not only an individual project, but also entire ecosystems as a whole.
 
-![Figure 1: Hype cycle chart \n Source: from [6]](https://open-source-quality.github.io/hype-cycle-chart.png)
+![Figure 1: Hype cycle chart from [8]](https://open-source-quality.github.io/hype-cycle-chart.png)
 
 It is difficult to figure out where open source ecosystems lie on the maturity model as download rates are not accurately available. It is possible to proxy this information by looking at other metrics such as stars, contributions, and other repository acitivity.
-
-Current literature on MLOps often focuses on case studies for a certain team [7]. While some papers give some state-of-the-art of MLOps, this field constantly changes, with new tools and frameworks being released [8].
 
 In all, machine learning operations in the open source world is an emerging field. It is clear that tools exist and span a variety of tasks to help practioners bring models into production. Knowing the maturity of this ecosystem can help contextualize machine learning operations tools as a whole.
 
@@ -94,8 +92,8 @@ The discoveries from this work could easily be extended further. One possible ou
 
 [5] E. Breck, S. Cai, E. Nielsen, M. Salib and D. Sculley, "The ML test score: A rubric for ML production readiness and technical debt reduction," _2017 IEEE International Conference on Big Data (Big Data)_, 2017, pp. 1123-1132, doi: 10.1109/BigData.2017.8258038.
 
-[6] "Open-source Maturity Model." Open-source Quality Research Project. Accessed: Nov. 20, 2022. [Online]. Available: https://open-source-quality.github.io/2018/02/01/open-source-maturity-model.html
+[6] N. Muralidhar, S. Muthiah, P. Butler, M. Jain, Y. Yu, K. Burne, W. Li, D. Jones, P. Arunachalam, H.S. McCormick, and N. Ramakrishnan. "Using AntiPatterns to avoid MLOps Mistakes." _arXiv_, 2021. [Online]. Available: https://arxiv.org/pdf/2107.00079.pdf
 
-[7] N. Muralidhar, S. Muthiah, P. Butler, M. Jain, Y. Yu, K. Burne, W. Li, D. Jones, P. Arunachalam, H.S. McCormick, and N. Ramakrishnan. "Using AntiPatterns to avoid MLOps Mistakes." _arXiv_, 2021. [Online]. Available: https://arxiv.org/pdf/2107.00079.pdf
+[7] P. Ruf, M. Madan, C. Reich, and D. Ould-Abdeslam, “Demystifying MLOps and Presenting a Recipe for the Selection of Open-Source Tools,” _Applied Sciences_, vol. 11, no. 19, p. 8861, Sep. 2021, doi: 10.3390/app11198861. [Online]. Available: http://dx.doi.org/10.3390/app11198861
 
-[8] P. Ruf, M. Madan, C. Reich, and D. Ould-Abdeslam, “Demystifying MLOps and Presenting a Recipe for the Selection of Open-Source Tools,” _Applied Sciences_, vol. 11, no. 19, p. 8861, Sep. 2021, doi: 10.3390/app11198861. [Online]. Available: http://dx.doi.org/10.3390/app11198861
+[8] "Open-source Maturity Model." Open-source Quality Research Project. Accessed: Nov. 20, 2022. [Online]. Available: https://open-source-quality.github.io/2018/02/01/open-source-maturity-model.html
