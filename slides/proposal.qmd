@@ -1,0 +1,81 @@
+---
+title: Meta-analysis of the machine learning operations open source ecosystem
+subtitle: Florida Polytechnic University
+author: Isabel Zimmerman
+date: November 30, 2022
+format:     
+    revealjs:
+        slide-number: true
+        theme: [default, theme.scss]
+---
+
+# Abstract
+
+This project will explore the open source machine learning operations ecosystem as a whole and highlight tools of interest.
+
+::: {.notes}
+there have been different papers published that analyze other aspects of open source data science tools such as data mining or computer vision, but the machine learning operations niche has been largely untouched
+:::
+
+##
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3140_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/g/11h1vbjpbg","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=US&q=%2Fg%2F11h1vbjpbg","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+
+. . . 
+
+MLOps, is a _set of practices_ to _deploy and maintain_ machine learning models in production __reliably__ and __efficiently__. 
+
+::: {.notes}
+and that is partially because it is so new! if we use google trends, we can see that in late 2021 ish, google searches for mlops started to increase--
+
+however, academic papers on mlops are still scarce, if you were to search google scholar for mlops, you would only get about 1,500 results, where machine learning operations has well over 3.5 million.
+
+machine learning operations is important-- they are a set of practices to ... 
+
+bringing machine learning models outside of local development into a production environment is becoming even more important as machine learning models are being integrated in many services that affect our everyday lives
+
+:::
+
+## Expected outcomes
+
+This project will explore the open source machine learning operations ecosystem as a whole and highlight tools of interest. MLOps tools will be compared and classified by __task__ and __maturity.__
+
+. . .
+
+- Research paper
+- Interactive dashboard
+
+::: {.notes}
+tasks will be classified by unsupervised learning methods
+
+- orchestration
+- ml platform
+- model versioning
+- model services
+- model performance monitoring
+
+maturity will be proxied by github interactions
+:::
+
+## Steps
+
+::: {.incremental}
+- Gather data
+- Clean and explore data
+- Build maturity models
+- Build unsupervised learning models
+- Build interactive dashboard
+:::
+
+# _Thank you!_
+
+
+# Maturity model of open source projects
+
+![Figure from Olga Tarkovskiy](https://open-source-quality.github.io/hype-cycle-chart.png)
+
+[8 lessons from 20 years of the hype cycle](https://www.linkedin.com/pulse/8-lessons-from-20-years-hype-cycles-michael-mullany/)
+
+#
+
+[GitHub REST API OpenAPI Specification](https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json)
