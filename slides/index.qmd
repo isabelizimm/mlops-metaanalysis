@@ -1,0 +1,116 @@
+---
+title: Meta-analysis of the machine learning operations open source ecosystem
+subtitle: Florida Polytechnic University
+author: Isabel Zimmerman
+date: April 26, 2023
+format:     
+    revealjs:
+        slide-number: true
+        theme: [default, theme.scss]
+---
+
+# Introduction
+
+## What is MLOps
+
+# Literature review
+
+::: {.notes}
+when you look at current literature, you'll realize that....
+:::
+
+## MLOps and DevOps
+
+::: {.r-fit-text}
+DevOps seeks to shorten the cycle between development and operationalizing code.
+:::
+
+DEVOPS CYCLE
+
+## MLOps and DevOps
+
+MLOPS CYCLE
+
+## Tasks and tools
+
+::: {.notes}
+there's not always a 1:1 ratio of task:tool
+:::
+
+# Methodology
+
+## Data gathering
+
+
+
+## Exploratory data analysis
+
+![](../images/lang.png)
+
+
+## Exploratory data analysis
+
+![](../images/n_repo_cumsum.png)
+
+## Modeling
+
+![](../images/lda_repo_descriptions.png)
+
+## Modeling
+
+![](../images/dbscan_5.png)
+
+# Discussion
+
+## Profiling the space
+
+- recency
+
+. . .
+
+![](../images/time_since_last_contribution.png)
+
+## Profiling the space
+
+- recency
+- size
+
+. . .
+
+![](../images/size_of.png)
+
+## Profiling the space
+
+- recency
+- size
+- contribution rate
+
+. . .
+
+![](../images/gppr_graph.png)
+
+## A space of learners
+
+::: {.notes}
+much of this exploration leads to the fact that MLOps is not an established space. people are just starting to learn, experiment, try out examples, teach others, etc. maybe, because this a space is a big conglomeration of established principles like devops and machine learning and reproducible work, there is no traditional pathway where you can learn definitions. MLOps practices are generally only implemented at scale, so mocking out large systems makes this a difficult space.
+:::
+
+## Cloud tooling prevalence
+
+
+# Further work
+
+::: {.incremental}
+- repeat this study with all data science and machine learning tags
+- opinionated workflow
+- survival analysis
+:::
+
+
+# Conclusion
+
+::: {.incremental}
+- MLOps is a new field built from established practices
+- Much content is built around learning MLOps
+
+:::
