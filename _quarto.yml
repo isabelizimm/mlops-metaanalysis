@@ -1,0 +1,11 @@
+project:
+  type: website
+  title: "mlops-metaanalysis"
+
+website:
+  navbar:
+    background: '#532d8e'
+    search: true
+    left:
+      - text: "Proposal"
+        file: index.qmd
