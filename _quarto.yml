@@ -1,6 +1,6 @@
 project:
   type: website
-  title: "mlops-metaanalysis"
+  title: "Meta-analysis of the machine learning operations open source ecosystem"
 
 website:
   navbar:

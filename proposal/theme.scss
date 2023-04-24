@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*-- scss:defaults --*/
+
+$poly-purple: #532d8e;
+
+$body-color: black;
+
+$code-block-font-size: 30px;
+
+$p: 40px;
+
+/*-- scss:rules --*/
+
+.reveal .footer {
+  background-color: $poly-purple;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  bottom: 0px !important; // makes sure there isn't any space below the footer box
+  z-index: -1 !important; // makes sure it is places behind the logo
+}

@@ -14,4 +14,4 @@ format: html
 
 # PDF Download
 
-<p class="text-center"><a class="btn btn-success btn-lg" target="_blank" href="slides/">{{< fa arrow-up-right-from-square >}} &ensp;View slides in new window</a> <a class="btn btn-success btn-lg" target="_blank" href="slides/slides.pdf" role="button">{{< fa file-pdf >}} &ensp;Download PDF</a></p>
+<p class="text-center"><a class="btn btn-success btn-lg" target="_blank" href="slides/">{{< fa arrow-up-right-from-square >}} &ensp;View slides in new window</a> <a class="btn btn-success btn-lg" target="_blank" href="slides/index.pdf" role="button">{{< fa file-pdf >}} &ensp;Download PDF</a></p>
