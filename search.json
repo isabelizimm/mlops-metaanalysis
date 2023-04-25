@@ -2,23 +2,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Meta-analysis of the machine learning operations open source ecosystem",
+    "title": "",
     "section": "",
-    "text": "View slides in new window   Download PDF"
+    "text": "Machine learning operations, or MLOps, is a new field. It is clear that open-source tools exist and span a variety of tasks to help practitioners bring models into production. Knowing the maturity of this ecosystem can help guide toolmakers to prioritize support and inform academic content on what tasks are being performed in real-world machine learning systems. The data science workflow for static data is well established, but continuously updating data, making predictions on streaming data, and effectively utilizing feedback loops have created new challenges. In all, this paper offers a novel approach by exploring MLOps using a data-driven approach, collecting high-level information on many tools to better understand the size of the ecosystem, the types of tools, and how they are being used. The aim is to better understand the open-source MLOps ecosystem as a whole and see how the code shared reflects the identified sectors in research."
   },
   {
     "objectID": "index.html#slides",
     "href": "index.html#slides",
-    "title": "Meta-analysis of the machine learning operations open source ecosystem",
-    "section": "",
-    "text": "View slides in new window   Download PDF"
-  },
-  {
-    "objectID": "slides/index.html#what-is-mlops",
-    "href": "slides/index.html#what-is-mlops",
-    "title": "Meta-analysis of the machine learning operations open source ecosystem",
-    "section": "What is MLOps",
-    "text": "What is MLOps"
+    "title": "",
+    "section": "Slides",
+    "text": "Slides\n\n\n\n\n\n  View slides in new window   Download PDF"
   },
   {
     "objectID": "slides/index.html#mlops-and-devops",
@@ -42,11 +35,18 @@
     "text": "Tasks and tools\n\nthere’s not always a 1:1 ratio of task:tool"
   },
   {
-    "objectID": "slides/index.html#data-gathering",
-    "href": "slides/index.html#data-gathering",
+    "objectID": "slides/index.html#github-data",
+    "href": "slides/index.html#github-data",
     "title": "Meta-analysis of the machine learning operations open source ecosystem",
-    "section": "Data gathering",
-    "text": "Data gathering"
+    "section": "Github data",
+    "text": "Github data"
+  },
+  {
+    "objectID": "slides/index.html#github-data-1",
+    "href": "slides/index.html#github-data-1",
+    "title": "Meta-analysis of the machine learning operations open source ecosystem",
+    "section": "Github data",
+    "text": "Github data\n\ngathered repositories with mlops, model-management labels\nprogrammatic access through REST API to get information"
   },
   {
     "objectID": "slides/index.html#exploratory-data-analysis",
@@ -67,49 +67,49 @@
     "href": "slides/index.html#modeling",
     "title": "Meta-analysis of the machine learning operations open source ecosystem",
     "section": "Modeling",
-    "text": "Modeling"
+    "text": "Modeling\n\n\nexlain what LDA is"
   },
   {
     "objectID": "slides/index.html#modeling-1",
     "href": "slides/index.html#modeling-1",
     "title": "Meta-analysis of the machine learning operations open source ecosystem",
     "section": "Modeling",
-    "text": "Modeling"
+    "text": "Modeling\n\n\nexplain DBSCAN"
   },
   {
-    "objectID": "slides/index.html#profiling-the-space",
-    "href": "slides/index.html#profiling-the-space",
+    "objectID": "slides/index.html#how-is-this-ecosystem-growing",
+    "href": "slides/index.html#how-is-this-ecosystem-growing",
     "title": "Meta-analysis of the machine learning operations open source ecosystem",
-    "section": "Profiling the space",
-    "text": "Profiling the space\n\nrecency"
+    "section": "How is this ecosystem growing?",
+    "text": "How is this ecosystem growing?\n\nRecency"
   },
   {
-    "objectID": "slides/index.html#profiling-the-space-1",
-    "href": "slides/index.html#profiling-the-space-1",
+    "objectID": "slides/index.html#how-is-this-ecosystem-growing-1",
+    "href": "slides/index.html#how-is-this-ecosystem-growing-1",
     "title": "Meta-analysis of the machine learning operations open source ecosystem",
-    "section": "Profiling the space",
-    "text": "Profiling the space\n\nrecency\nsize"
+    "section": "How is this ecosystem growing?",
+    "text": "How is this ecosystem growing?\n\nRecency\nSize"
   },
   {
-    "objectID": "slides/index.html#profiling-the-space-2",
-    "href": "slides/index.html#profiling-the-space-2",
+    "objectID": "slides/index.html#how-is-this-ecosystem-growing-2",
+    "href": "slides/index.html#how-is-this-ecosystem-growing-2",
     "title": "Meta-analysis of the machine learning operations open source ecosystem",
-    "section": "Profiling the space",
-    "text": "Profiling the space\n\nrecency\nsize\ncontribution rate"
+    "section": "How is this ecosystem growing?",
+    "text": "How is this ecosystem growing?\n\nRecency\nSize\nContribution rate"
   },
   {
-    "objectID": "slides/index.html#a-space-of-learners",
-    "href": "slides/index.html#a-space-of-learners",
+    "objectID": "slides/index.html#what-kind-of-content-is-being-posted",
+    "href": "slides/index.html#what-kind-of-content-is-being-posted",
     "title": "Meta-analysis of the machine learning operations open source ecosystem",
-    "section": "A space of learners",
-    "text": "A space of learners\n\nmuch of this exploration leads to the fact that MLOps is not an established space. people are just starting to learn, experiment, try out examples, teach others, etc. maybe, because this a space is a big conglomeration of established principles like devops and machine learning and reproducible work, there is no traditional pathway where you can learn definitions. MLOps practices are generally only implemented at scale, so mocking out large systems makes this a difficult space."
+    "section": "What kind of content is being posted?",
+    "text": "What kind of content is being posted?\n\nmuch of this exploration leads to the fact that MLOps is not an established space. people are just starting to learn, experiment, try out examples, teach others, etc. maybe, because this a space is a big conglomeration of established principles like devops and machine learning and reproducible work, there is no traditional pathway where you can learn definitions. MLOps practices are generally only implemented at scale, so mocking out large systems makes this a difficult space."
   },
   {
-    "objectID": "slides/index.html#cloud-tooling-prevalence",
-    "href": "slides/index.html#cloud-tooling-prevalence",
+    "objectID": "slides/index.html#what-does-adoption-of-mlops-look-like",
+    "href": "slides/index.html#what-does-adoption-of-mlops-look-like",
     "title": "Meta-analysis of the machine learning operations open source ecosystem",
-    "section": "Cloud tooling prevalence",
-    "text": "Cloud tooling prevalence"
+    "section": "What does adoption of MLOps look like?",
+    "text": "What does adoption of MLOps look like?\n\ncloud prevalence\nDataOps vs MLOps\n\n\nthere’s a great quote from Chip Huyen’s book Designing Machine Learning Systems: Data versioning is like flossing your teeth. Everyone knows you’re supposed to do it…"
   },
   {
     "objectID": "project/04_modeling.html",
