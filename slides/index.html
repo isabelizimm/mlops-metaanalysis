@@ -406,9 +406,14 @@ Isabel Zimmerman
 </section>
 <section>
 <section id="what-is-mlops" class="title-slide slide level1 center">
-<h1>What is MLOps</h1>
+<h1>What is MLOps?</h1>
+<ul>
+<li>set of practices to deploy and maintain machine learning models in production reliably and efficiently</li>
+<li>roots in Development Operations</li>
+</ul>
 <aside class="notes">
-<p>when you look at current literature, you’ll realize that….</p>
+<p>when you look at current literature, you’ll realize that much of it is based around the idea of WHAT IS MLOPs, showing its newness</p>
+<p>built off foundations of development operations, which is a common term in computer science. devops shortens cycle between developing and productionalizing code, MLOps is for modeling</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -423,33 +428,80 @@ Isabel Zimmerman
 </section>
 <section id="section" class="slide level2" data-background-image="../images/cycle-1.svg">
 <h2></h2>
+<aside class="notes">
+<p>data science workflow is well established</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="section-1" class="slide level2" data-background-image="../images/cycle-2.svg">
 <h2></h2>
+<aside class="notes">
+<p>as projects get bigger you might need to track data</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="section-2" class="slide level2" data-background-image="../images/cycle-3.svg">
 <h2></h2>
+<aside class="notes">
+<p>creating many models might have to track each one for forwards/backwards</p>
+<p>high quantity, might want experiment tracking with relevant metadata as well</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="section-3" class="slide level2" data-background-image="../images/cycle-4.svg">
 <h2></h2>
+<aside class="notes">
+<p>the ROI of models are 0 unless they are used…being used means many different things BUT deployment is when model is off your comptuer</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="section-4" class="slide level2" data-background-image="../images/cycle-5.svg">
 <h2></h2>
-</section>
-<section id="mlops-and-devops" class="slide level2">
-<h2>MLOps and DevOps</h2>
-<div class="r-fit-text">
-<p>DevOps seeks to shorten the cycle between development and operationalizing code.</p>
-</div>
-<p>DEVOPS CYCLE</p>
-</section>
-<section id="mlops-and-devops-1" class="slide level2">
-<h2>MLOps and DevOps</h2>
-<p>MLOPS CYCLE</p>
-</section>
-<section id="tasks-and-tools" class="slide level2">
-<h2>Tasks and tools</h2>
 <aside class="notes">
+<p>high velocity, high quantity, you don’t want to manage and run all of this manually.</p>
+<p>if you think of data science as a hierarchy of needs, MLOps is pretty high on the list– that is, you need a strong foundation of data, analysis and model building before it makes sense to use MLOps.</p>
+<ul>
+<li>data centric</li>
+<li>model centric</li>
+<li>pipeline centric</li>
+</ul>
+<p>40% of data scientists from a study say they work with infrastructure, so pieces are beginning to be used more widely as the maturation of data science progresses</p>
 <p>there’s not always a 1:1 ratio of task:tool</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -465,6 +517,9 @@ Isabel Zimmerman
 </section></section>
 <section id="what-i-did" class="title-slide slide level1 center">
 <h1>What I did</h1>
+<div class="r-fit-text">
+<p>analysis of <em>open source projects</em> labeled with <strong>MLOps</strong></p>
+</div>
 <aside class="notes">
 <p>My project was a long-format analysis of</p>
 <ul>
@@ -486,8 +541,8 @@ Isabel Zimmerman
 </section>
 
 <section>
-<section id="how-i-did-it" class="title-slide slide level1 center">
-<h1>How I did it</h1>
+<section id="methodology" class="title-slide slide level1 center">
+<h1>Methodology</h1>
 
 </section>
 <section id="github-data" class="slide level2">
@@ -499,6 +554,26 @@ Isabel Zimmerman
 <p><img data-src="../images/gh-issue-bug.png" class="fragment"></p>
 <p><img data-src="../images/gh-pull-request.png" class="fragment"></p>
 </div>
+<aside class="notes">
+<p>used data from github, platform that hosts code most open source world is here</p>
+<ul>
+<li>description</li>
+<li>labels</li>
+<li>stars (think like facebook or instagram likes, good to see engagement, not good to see quality or usefulness)</li>
+<li>issues</li>
+<li>pull requests</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="github-data-1" class="slide level2">
 <h2>Github data</h2>
@@ -506,21 +581,90 @@ Isabel Zimmerman
 <li>gathered repositories with <code>mlops</code>, <code>model-management</code> labels</li>
 <li>programmatic access through REST API to get information</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">gh</span> api <span class="dt">\ </span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="ex">-H</span> <span class="st">"Accept: application/vnd.github+json"</span> <span class="dt">\</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="st">"/search/repositories?q=topic:mlops&amp;per_page=100&amp;page=1"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<aside class="notes">
+<p>give back large chunks of json that included metrics like above: number of issues as well as issues content, etx</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="limitations-of-data" class="slide level2">
+<h2>Limitations of data</h2>
+<ul>
+<li>all open source users</li>
+<li>based off of self-labeled topics</li>
+</ul>
+<aside class="notes">
+<p>This data is subject to selection bias as the people who are contributing to the open source space likely do not encapsulate a large section of MLOps users, who are likely embedded in organizations working on proprietary models.</p>
+<p>It is possible that certain languages are over- or under-represented depending on community adoption of topic utilization.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="exploratory-data-analysis" class="slide level2">
 <h2>Exploratory data analysis</h2>
 
-<img data-src="../images/lang.png" class="r-stretch"></section>
+<img data-src="../images/lang.png" class="r-stretch"><aside class="notes">
+<p>largeeeely a python space</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="exploratory-data-analysis-1" class="slide level2">
 <h2>Exploratory data analysis</h2>
 
-<img data-src="../images/n_repo_cumsum.png" class="r-stretch"></section>
+<img data-src="../images/n_repo_cumsum.png" class="r-stretch"><aside class="notes">
+<p>some of the first paper you can find on google scholar is 2019</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="modeling" class="slide level2">
 <h2>Modeling</h2>
 
-<img data-src="../images/lda_repo_descriptions.png" class="r-stretch"><aside class="notes">
-<p>exlain what LDA is</p>
+<img data-src="../images/models_features.svg" class="r-stretch"><aside class="notes">
+<p>used nltk and scikit-learn</p>
+<p>TFIDF Term frequency–inverse document frequency - term weighting scheme where the amount of times a word appears in a single document is measured against how often the word is used in a collection of documents</p>
+<p>Latent Dirichlet Allocation (LDA) - simultaneously finds the mixture of words associated with each topic, while also determining the mixture of topics that describes each document</p>
+<ul>
+<li>also tried this with issue and pull requests, but i quickly realized that pretty much all the topics were about maintenance</li>
+</ul>
+<p>principal component analysis (PCA) - dimensionality reduction technique that maximizes variance while generating new, uncorrelated variables through solving eigenvalue/eigenvector computations - transform the columns into two principal components in order to be visualized in a two-dimensional space.</p>
+<p>Density-Based Spatial Clustering of Applications with Noise (DBSCAN) - data seemed to have clusters of dense points after PCA - clusters data points that are high in density; it is especially useful when clusters are high-density areas separated by low-density areas</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -537,7 +681,17 @@ Isabel Zimmerman
 <h2>Modeling</h2>
 
 <img data-src="../images/dbscan_5.png" class="r-stretch"><aside class="notes">
-<p>explain DBSCAN</p>
+<ul>
+<li>unsupervised learning so no known labels to have things like accuracy, RMSE</li>
+<li>generated a silhoutte score, which penalizes the overlap of each cluster’s space</li>
+</ul>
+<p>cluster -1 black - outliers - highest amount of average stars - highest amount of average issues - LDA mode: curated lists on production tools</p>
+<p>most hype is around lists, educational content</p>
+<p>cluster 0 red - average last commit of 256 days - 6 open issues - avg age 1.5 years - commits in the 8 is months - AWS, education small projects actively maintained, demos</p>
+<p>cluster 1 orange - more stars than 0 - more issues than 0 - older than 0 - AWS, deployment</p>
+<p>cluster 2 yellow - less stars than 2 - deep learning</p>
+<p>cluster 3 green - no issues - likely mostly pet projects - AWS, deployment close distance between average age and average time since last commit, this seemed to be largely abandoned repos</p>
+<p>cluster 4 cyan - older repos - lowest stars - versioning, education</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -557,13 +711,18 @@ Isabel Zimmerman
 </section>
 <section id="how-is-this-ecosystem-growing" class="slide level2">
 <h2>How is this ecosystem growing?</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
 <ul>
 <li>Recency</li>
 </ul>
-<div class="fragment">
+</div><div class="column" style="width:70%;">
 <p><img data-src="../images/time_since_last_contribution.png"></p>
+</div>
+</div>
 <aside class="notes">
-
+<p>“not dissimilar to looking at the date that a news article was published before deciding to cite information”</p>
+<p>because this is a young ecosystem, it’s not surprising that many contributions have been in the last year, but this does give the impression much of this code is pretty fresh</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -575,18 +734,26 @@ Isabel Zimmerman
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</div>
 </section>
 <section id="how-is-this-ecosystem-growing-1" class="slide level2">
 <h2>How is this ecosystem growing?</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
 <ul>
 <li>Recency</li>
 <li>Size</li>
 </ul>
-<div class="fragment">
+</div><div class="column" style="width:70%;">
 <p><img data-src="../images/size_of.png"></p>
+</div>
+</div>
 <aside class="notes">
-
+<p>People can participate in open-source software at multiple levels.</p>
+<ul>
+<li>users, who are utilizing the code posted for tasks</li>
+<li>issue openers</li>
+<li>code contributors</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -598,22 +765,42 @@ Isabel Zimmerman
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</div>
 </section>
 <section id="how-is-this-ecosystem-growing-2" class="slide level2">
 <h2>How is this ecosystem growing?</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
 <ul>
 <li>Recency</li>
 <li>Size</li>
 <li>Contribution rate</li>
 </ul>
-<div class="fragment">
+</div><div class="column" style="width:70%;">
 <p><img data-src="../images/gppr_graph.png"></p>
 </div>
+</div>
+<aside class="notes">
+<p>gross product pull requests (GPPR) GPPR is defined as the number of pull requests merged in a month</p>
+<p>One repository with 1 dedicated maintainer and 9 contributors who made single pull requests looks very different than another repository with 10 dedicated maintainers, or yet another with 10 few-time contributors.</p>
+<p>steady and continued growth</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="what-kind-of-content-is-being-posted" class="slide level2">
 <h2>What kind of content is being posted?</h2>
-<aside class="notes">
+
+<img data-src="../images/topics_for_slide.svg" class="r-stretch"><aside class="notes">
+<p>i generalized</p>
+<p>while you do see many repeated topics, this is intentional and for presentation purposes. when you dive into each topic, i found the granularity of each to be individually important: for example, one education topic might be about curated lists of tools, where another education topic is about code demos, etc</p>
 <p>much of this exploration leads to the fact that MLOps is not an established space. people are just starting to learn, experiment, try out examples, teach others, etc. maybe, because this a space is a big conglomeration of established principles like devops and machine learning and reproducible work, there is no traditional pathway where you can learn definitions. MLOps practices are generally only implemented at scale, so mocking out large systems makes this a difficult space.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -629,10 +816,12 @@ Isabel Zimmerman
 </section>
 <section id="what-does-adoption-of-mlops-look-like" class="slide level2">
 <h2>What does adoption of MLOps look like?</h2>
+<div>
 <ul>
-<li>cloud prevalence</li>
-<li>DataOps vs MLOps</li>
+<li class="fragment">cloud prevalence</li>
+<li class="fragment">DataOps vs MLOps</li>
 </ul>
+</div>
 <aside class="notes">
 <p>there’s a great quote from Chip Huyen’s book Designing Machine Learning Systems: Data versioning is like flossing your teeth. Everyone knows you’re supposed to do it…</p>
 <style type="text/css">
@@ -663,8 +852,32 @@ Isabel Zimmerman
 <div>
 <ul>
 <li class="fragment">MLOps is a new field built from established practices</li>
+<li class="fragment">The MLOps open source code base is growing</li>
 <li class="fragment">Much content is built around learning MLOps</li>
+<li class="fragment">There may be a need to more strongly segregate DataOps and MLOps</li>
+<li class="fragment">Cloud infrastructure is highlighted much more often in code than in literature</li>
 </ul>
+</div>
+</section>
+
+<section id="thank-you-all" class="title-slide slide level1 center">
+<h1>Thank you all!</h1>
+<p>And a special thanks to the following:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Dr.&nbsp;Reinaldo Sanchez-Arias</li>
+<li>Dr.&nbsp;Paniz Abedin</li>
+<li>Dr.&nbsp;Julia Silge</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>Dr.&nbsp;Sophie Watson</li>
+<li>Orel Yoshia</li>
+<li>Valentina Colorado</li>
+<li>Noah Zimmerman</li>
+</ul>
+</div>
 </div>
 
 <div class="footer footer-default">

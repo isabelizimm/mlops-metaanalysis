@@ -260,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>).corr()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/5w/dhznpltj14n3nxr4fybjj8_w0000gn/T/ipykernel_81609/208152933.py:1: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.</code></pre>
+<pre><code>/var/folders/5w/dhznpltj14n3nxr4fybjj8_w0000gn/T/ipykernel_10565/208152933.py:1: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
@@ -1073,7 +1073,7 @@ stars max:  32107</code></pre>
 <span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>       )</span>
 <span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/Users/isabelzimmerman/.pyenv/versions/pydemo/lib/python3.9/site-packages/plotnine/guides/guides.py:187: PlotnineWarning: Cannot generate legend for the 'alpha' aesthetic. Make sure you have mapped a variable to it</code></pre>
+<pre><code>/Users/isabelzimmerman/.pyenv/versions/3.9.11/envs/pydemo/lib/python3.9/site-packages/plotnine/guides/guides.py:187: PlotnineWarning: Cannot generate legend for the 'alpha' aesthetic. Make sure you have mapped a variable to it</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="03_feature_engineering_files/figure-html/cell-20-output-2.png" class="img-fluid"></p>
@@ -1103,7 +1103,7 @@ Name: time_since_last_commit_days, dtype: float64</code></pre>
 <p><img src="03_feature_engineering_files/figure-html/cell-23-output-2.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="24">
+<div class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>lang <span class="op">=</span> pd.DataFrame(</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    refined_df.language.value_counts()</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
@@ -1116,32 +1116,29 @@ Name: time_since_last_commit_days, dtype: float64</code></pre>
 </div>
 <div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#board.pin_write(lang_percent, "lang", type="csv")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>NameError: name 'board' is not defined</code></pre>
 </div>
-</div>
-<div class="cell" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>(lang </span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> <span class="bu">filter</span>(_.n <span class="op">&gt;=</span> <span class="dv">5</span>)</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> arrange(<span class="op">-</span>_.n)</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> mutate(</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>        percent <span class="op">=</span> _.n<span class="op">/</span>total_lang</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> ggplot()</span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_col(aes(x <span class="op">=</span> <span class="st">'reorder(language, percent)'</span>, y <span class="op">=</span> <span class="st">"percent"</span>))</span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> labs(</span>
-<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>            y <span class="op">=</span> <span class="st">'Number of repositories'</span>, </span>
-<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> <span class="st">'Language'</span>,</span>
-<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>            title <span class="op">=</span> <span class="st">'Repositories for each language'</span>)</span>
-<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> scale_y_continuous()</span>
-<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> coord_flip()</span>
-<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> theme_minimal()</span>
-<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> theme(axis_text_x <span class="op">=</span> element_text(angle <span class="op">=</span> <span class="op">-</span><span class="dv">75</span>))</span>
-<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>(lang </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> <span class="bu">filter</span>(_.n <span class="op">&gt;=</span> <span class="dv">5</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> arrange(<span class="op">-</span>_.n)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> mutate(</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>        percent <span class="op">=</span> _.n<span class="op">/</span>total_lang</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> ggplot()</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> geom_col(aes(x <span class="op">=</span> <span class="st">'reorder(language, percent)'</span>, y <span class="op">=</span> <span class="st">"percent"</span>))</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> labs(</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>            y <span class="op">=</span> <span class="st">'Number of repositories'</span>, </span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> <span class="st">'Language'</span>,</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>            title <span class="op">=</span> <span class="st">'Repositories for each language'</span>)</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> scale_y_continuous()</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> coord_flip()</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> theme_minimal()</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">+</span> theme(axis_text_x <span class="op">=</span> element_text(angle <span class="op">=</span> <span class="op">-</span><span class="dv">75</span>))</span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/Users/isabelzimmerman/.pyenv/versions/pydemo/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
-/Users/isabelzimmerman/.pyenv/versions/pydemo/lib/python3.9/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide</code></pre>
+<pre><code>/Users/isabelzimmerman/.pyenv/versions/3.9.11/envs/pydemo/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+/Users/isabelzimmerman/.pyenv/versions/3.9.11/envs/pydemo/lib/python3.9/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="03_feature_engineering_files/figure-html/cell-26-output-2.png" class="img-fluid"></p>
@@ -1149,25 +1146,25 @@ Name: time_since_last_commit_days, dtype: float64</code></pre>
 </div>
 <section id="pca-for-numeric-data" class="level1">
 <h1>PCA for numeric data</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>numeric_df <span class="op">=</span> (refined_df</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> select(_.stargazers_count,</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    _.has_issues,</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    _.has_projects,</span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    _.has_downloads,</span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    _.has_wiki,</span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    _.has_pages,</span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    _.has_discussions,</span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>    _.open_issues_count,</span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>    _.allow_forking,</span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>    _.is_template,</span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>    _.age_days,</span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>    _.time_since_last_commit_days,</span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>    _.description)</span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>numeric_df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="88">
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>numeric_df <span class="op">=</span> (refined_df</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">&gt;&gt;</span> select(_.stargazers_count,</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    _.has_issues,</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    _.has_projects,</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    _.has_downloads,</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>    _.has_wiki,</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>    _.has_pages,</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>    _.has_discussions,</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>    _.open_issues_count,</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>    _.allow_forking,</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>    _.is_template,</span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>    _.age_days,</span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>    _.time_since_last_commit_days,</span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>    _.description)</span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a>numeric_df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>Index(['stargazers_count', 'has_issues', 'has_projects', 'has_downloads',
        'has_wiki', 'has_pages', 'has_discussions', 'open_issues_count',
        'allow_forking', 'is_template', 'age_days',
@@ -1175,34 +1172,33 @@ Name: time_since_last_commit_days, dtype: float64</code></pre>
       dtype='object')</code></pre>
 </div>
 </div>
-<div class="cell">
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pins</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> pins.board_folder(<span class="st">"."</span>)</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pins</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> pins.board_folder(<span class="st">"."</span>)</span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(board.pin_read(<span class="st">"train_data"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>949</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pins</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>board <span class="op">=</span> pins.board_folder(<span class="st">"."</span>)</span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>board.pin_write(numeric_df, <span class="st">"train_data"</span>, <span class="bu">type</span><span class="op">=</span><span class="st">'csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>board.pin_write(numeric_df, <span class="st">"train_data"</span>, <span class="bu">type</span><span class="op">=</span><span class="st">'csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Writing pin:
 Name: 'train_data'
-Version: 20230417T233026Z-e7222</code></pre>
+Version: 20230425T174752Z-e7222</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="95">
-<pre><code>Meta(title='train_data: a pinned 949 x 13 DataFrame', description=None, created='20230417T233026Z', pin_hash='e72220ceddde1cfc', file='train_data.csv', file_size=135626, type='csv', api_version=1, version=Version(created=datetime.datetime(2023, 4, 17, 23, 30, 26, 798266), hash='e72220ceddde1cfc'), name='train_data', user={}, local={})</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>Meta(title='train_data: a pinned 949 x 13 DataFrame', description=None, created='20230425T174752Z', pin_hash='e72220ceddde1cfc', file='train_data.csv', file_size=135626, type='csv', api_version=1, version=Version(created=datetime.datetime(2023, 4, 25, 17, 47, 52, 277381), hash='e72220ceddde1cfc'), name='train_data', user={}, local={})</code></pre>
 </div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>numeric_df.corr()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>numeric_df.corr()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/5w/dhznpltj14n3nxr4fybjj8_w0000gn/T/ipykernel_10565/1242074588.py:1: FutureWarning: The default value of numeric_only in DataFrame.corr is deprecated. In a future version, it will default to False. Select only valid columns or specify the value of numeric_only to silence this warning.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="30">
 <div>
 
 
@@ -1228,122 +1224,122 @@ Version: 20230417T233026Z-e7222</code></pre>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">stargazers_count</td>
 <td>1.000000</td>
-<td>0.022014</td>
-<td>0.011715</td>
-<td>0.005487</td>
-<td>-0.074236</td>
-<td>0.103469</td>
-<td>0.168364</td>
-<td>0.444338</td>
+<td>0.021500</td>
+<td>0.011649</td>
+<td>0.005701</td>
+<td>-0.074833</td>
+<td>0.106701</td>
+<td>0.167507</td>
+<td>0.443709</td>
 <td>NaN</td>
-<td>-0.015479</td>
-<td>0.314891</td>
-<td>-0.140544</td>
+<td>-0.016668</td>
+<td>0.318012</td>
+<td>-0.142360</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">has_issues</td>
-<td>0.022014</td>
+<td>0.021500</td>
 <td>1.000000</td>
-<td>0.421496</td>
-<td>-0.004924</td>
-<td>0.331225</td>
-<td>-0.001225</td>
-<td>0.035929</td>
-<td>0.024210</td>
+<td>0.399281</td>
+<td>-0.004886</td>
+<td>0.310519</td>
+<td>0.014127</td>
+<td>0.034267</td>
+<td>0.023691</td>
 <td>NaN</td>
-<td>-0.011744</td>
-<td>-0.043577</td>
-<td>0.082498</td>
+<td>-0.013762</td>
+<td>-0.056031</td>
+<td>0.080816</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">has_projects</td>
-<td>0.011715</td>
-<td>0.421496</td>
+<td>0.011649</td>
+<td>0.399281</td>
 <td>1.000000</td>
-<td>-0.008943</td>
-<td>0.721533</td>
-<td>-0.032684</td>
-<td>-0.053718</td>
-<td>-0.001503</td>
+<td>-0.009095</td>
+<td>0.725250</td>
+<td>-0.027779</td>
+<td>-0.056568</td>
+<td>-0.001913</td>
 <td>NaN</td>
-<td>0.027023</td>
-<td>-0.071287</td>
-<td>0.140336</td>
+<td>0.027398</td>
+<td>-0.077540</td>
+<td>0.140177</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">has_downloads</td>
-<td>0.005487</td>
-<td>-0.004924</td>
-<td>-0.008943</td>
+<td>0.005701</td>
+<td>-0.004886</td>
+<td>-0.009095</td>
 <td>1.000000</td>
-<td>0.090379</td>
-<td>0.012196</td>
-<td>0.011691</td>
-<td>0.003697</td>
+<td>0.091592</td>
+<td>0.012357</td>
+<td>0.012120</td>
+<td>0.003917</td>
 <td>NaN</td>
-<td>0.005644</td>
-<td>0.009231</td>
-<td>0.027611</td>
+<td>0.005868</td>
+<td>0.009544</td>
+<td>0.028037</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">has_wiki</td>
-<td>-0.074236</td>
-<td>0.331225</td>
-<td>0.721533</td>
-<td>0.090379</td>
+<td>-0.074833</td>
+<td>0.310519</td>
+<td>0.725250</td>
+<td>0.091592</td>
 <td>1.000000</td>
-<td>-0.116943</td>
-<td>-0.160682</td>
-<td>-0.142623</td>
+<td>-0.106657</td>
+<td>-0.163847</td>
+<td>-0.144293</td>
 <td>NaN</td>
-<td>-0.012872</td>
-<td>-0.105632</td>
-<td>0.185980</td>
+<td>-0.012411</td>
+<td>-0.115923</td>
+<td>0.184562</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">has_pages</td>
-<td>0.103469</td>
-<td>-0.001225</td>
-<td>-0.032684</td>
-<td>0.012196</td>
-<td>-0.116943</td>
+<td>0.106701</td>
+<td>0.014127</td>
+<td>-0.027779</td>
+<td>0.012357</td>
+<td>-0.106657</td>
 <td>1.000000</td>
-<td>0.216514</td>
-<td>0.081766</td>
+<td>0.216159</td>
+<td>0.083953</td>
 <td>NaN</td>
-<td>-0.032432</td>
-<td>0.040193</td>
-<td>-0.153579</td>
+<td>-0.032499</td>
+<td>0.053643</td>
+<td>-0.147440</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">has_discussions</td>
-<td>0.168364</td>
-<td>0.035929</td>
-<td>-0.053718</td>
-<td>0.011691</td>
-<td>-0.160682</td>
-<td>0.216514</td>
+<td>0.167507</td>
+<td>0.034267</td>
+<td>-0.056568</td>
+<td>0.012120</td>
+<td>-0.163847</td>
+<td>0.216159</td>
 <td>1.000000</td>
-<td>0.272607</td>
+<td>0.271834</td>
 <td>NaN</td>
-<td>0.026296</td>
-<td>0.136109</td>
-<td>-0.214098</td>
+<td>0.024509</td>
+<td>0.139259</td>
+<td>-0.214890</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">open_issues_count</td>
-<td>0.444338</td>
-<td>0.024210</td>
-<td>-0.001503</td>
-<td>0.003697</td>
-<td>-0.142623</td>
-<td>0.081766</td>
-<td>0.272607</td>
+<td>0.443709</td>
+<td>0.023691</td>
+<td>-0.001913</td>
+<td>0.003917</td>
+<td>-0.144293</td>
+<td>0.083953</td>
+<td>0.271834</td>
 <td>1.000000</td>
 <td>NaN</td>
-<td>-0.022989</td>
-<td>0.324104</td>
-<td>-0.151425</td>
+<td>-0.024231</td>
+<td>0.327697</td>
+<td>-0.153358</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">allow_forking</td>
@@ -1362,47 +1358,47 @@ Version: 20230417T233026Z-e7222</code></pre>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">is_template</td>
-<td>-0.015479</td>
-<td>-0.011744</td>
-<td>0.027023</td>
-<td>0.005644</td>
-<td>-0.012872</td>
-<td>-0.032432</td>
-<td>0.026296</td>
-<td>-0.022989</td>
+<td>-0.016668</td>
+<td>-0.013762</td>
+<td>0.027398</td>
+<td>0.005868</td>
+<td>-0.012411</td>
+<td>-0.032499</td>
+<td>0.024509</td>
+<td>-0.024231</td>
 <td>NaN</td>
 <td>1.000000</td>
-<td>-0.023220</td>
-<td>-0.075741</td>
+<td>-0.024603</td>
+<td>-0.076137</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">age_days</td>
-<td>0.314891</td>
-<td>-0.043577</td>
-<td>-0.071287</td>
-<td>0.009231</td>
-<td>-0.105632</td>
-<td>0.040193</td>
-<td>0.136109</td>
-<td>0.324104</td>
+<td>0.318012</td>
+<td>-0.056031</td>
+<td>-0.077540</td>
+<td>0.009544</td>
+<td>-0.115923</td>
+<td>0.053643</td>
+<td>0.139259</td>
+<td>0.327697</td>
 <td>NaN</td>
-<td>-0.023220</td>
+<td>-0.024603</td>
 <td>1.000000</td>
-<td>0.247855</td>
+<td>0.236959</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">time_since_last_commit_days</td>
-<td>-0.140544</td>
-<td>0.082498</td>
-<td>0.140336</td>
-<td>0.027611</td>
-<td>0.185980</td>
-<td>-0.153579</td>
-<td>-0.214098</td>
-<td>-0.151425</td>
+<td>-0.142360</td>
+<td>0.080816</td>
+<td>0.140177</td>
+<td>0.028037</td>
+<td>0.184562</td>
+<td>-0.147440</td>
+<td>-0.214890</td>
+<td>-0.153358</td>
 <td>NaN</td>
-<td>-0.075741</td>
-<td>0.247855</td>
+<td>-0.076137</td>
+<td>0.236959</td>
 <td>1.000000</td>
 </tr>
 </tbody>
@@ -1416,9 +1412,12 @@ Version: 20230417T233026Z-e7222</code></pre>
 <h1>PCA of numeric repo data</h1>
 <section id="not-scaled" class="level2">
 <h2 class="anchored" data-anchor-id="not-scaled">not scaled</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>pca_numeric <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>).fit(numeric_df)</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>pca_numeric_output <span class="op">=</span> pca_numeric.transform(numeric_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>pca_numeric <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>).fit(numeric_df)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>pca_numeric_output <span class="op">=</span> pca_numeric.transform(numeric_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>ValueError: could not convert string to float: 'Learn how to responsibly develop, deploy and maintain production machine learning applications.'</code></pre>
+</div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>numeric_df.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
